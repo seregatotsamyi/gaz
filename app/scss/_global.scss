@@ -1,23 +1,40 @@
 html,
-body{
+body {
   height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Onest', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
+  font-family: $mainFont;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.42;
   background-color: $white;
-  color: $default;
+  color: $text;
   overflow-x: hidden;
+
+  @include adpt ($bmob-r) {
+    font-size: 12px;
+    line-height: 1.58;
+  }
 }
 
 .container {
-  max-width: 1350px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
+}
+
+.text {
+  color: $text;
+  font-size: 16px;
+  line-height: 1.25;
+
+  @include adpt ($bmob-r) {
+    font-size: 14px;
+    line-height: 1.42;
+  }
 }
 
 .sr-only {

@@ -1,21 +1,54 @@
 @font-face {
-  font-family: 'Onest';
-  font-weight: 800;
+  font-family: 'Montserrat';
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
   src:
-    url('../fonts/OnestExtraBold.woff2') format('woff2'),
-    url('../fonts/OnestExtraBold.woff') format('woff'),
-    url('../fonts/OnestExtraBold.ttf') format('ttf');
+    url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+    url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+    url('../fonts/Montserrat-SemiBold.ttf') format('ttf');
 }
 
 @font-face {
-  font-family: 'Onest';
-  font-weight: 700;
+  font-family: 'Montserrat';
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
   src:
-    url('../fonts/Onest-Bold.woff2') format('woff2'),
-    url('../fonts/OnestBold.woff') format('woff'),
-    url('../fonts/OnestBold.ttf') format('ttf');
+    url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+    url('../fonts/Montserrat-Medium.woff') format('woff'),
+    url('../fonts/Montserrat-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Montserrat-Light.woff2') format('woff2'),
+    url('../fonts/Montserrat-Light.woff') format('woff'),
+    url('../fonts/Montserrat-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Roboto-Black.woff2') format('woff2'),
+    url('../fonts/Roboto-Black.woff') format('woff'),
+    url('../fonts/Roboto-Black.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src:
+    url('../fonts/Roboto-Medium.woff2') format('woff2'),
+    url('../fonts/Roboto-Medium.woff') format('woff'),
+    url('../fonts/Roboto-Medium.ttf') format('ttf');
 }

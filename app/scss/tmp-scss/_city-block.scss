@@ -1,0 +1,116 @@
+.city-block {
+  width: 350px;
+  padding: 15px 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+
+  @include adpt ($desmr-r) {
+    width: 250px;
+  }
+
+  @include adpt ($tab-r) {
+    height: 100%;
+  }
+
+  @include adpt ($bmob-r) {
+    width: auto;
+  }
+
+  &._active {
+    background-color: #383838;
+
+    @include adpt ($tab-r) {
+      border-radius: 4px 4px 0 0;
+    }
+  }
+
+  &__icon {
+    padding-right: 12px;
+
+    @include adpt ($bmob-r) {
+      padding-right: 7px;
+    }
+  }
+
+
+  & .select2-selection {
+    position: relative;
+    background: none;
+    border-radius: 0;
+    border: none;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  & .select2-container {
+    position: relative;
+    width: 100% !important;
+    padding: 0 20px;
+
+    @include adpt ($desmr-r) {
+      padding: 0 15px;
+    }
+
+    @include adpt ($tab-r) {
+      padding: 0 6px;
+    }
+
+    &.select2-container--open {
+      & .select2-selection__arrow {
+        transform: rotate(180deg) !important;
+      }
+    }
+  }
+
+  & .select2-container .select2-selection--single {
+    & .select2-selection__rendered {
+      color: $white;
+      font-size: 16px;
+      line-height: 1.25;
+      line-height: 19px;
+      height: 20px;
+      padding-left: 0;
+      padding-right: 0;
+      display: flex;
+      align-items: center;
+
+      @include adpt ($bmob-r) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  & .select2-container--default .select2-selection--single .select2-selection__arrow {
+    flex-shrink: 0;
+    position: static;
+    margin-left: 12px;
+    width: 11px;
+    height: 6px;
+    background-image: url(../images/icon/dropdown.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.3s;
+
+    & b {
+      display: none;
+    }
+  }
+
+  & .result-select {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+._added-text-city {
+  color: $white;
+  padding: 0 10px 20px;
+
+  @include adpt ($desmr-r) {
+    padding: 0 5px 15px;
+  }
+}
