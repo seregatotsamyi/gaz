@@ -49,3 +49,14 @@ body {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.logo {
+  max-width: 189px;
+  width: 100%;
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
