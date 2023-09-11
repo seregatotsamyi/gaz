@@ -1,0 +1,124 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  transition: all 0.5s ease;
+
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 40px;
+
+    @include adpt ($bmob-r) {
+      padding: 15px;
+    }
+  }
+
+  &__content {
+    position: relative;
+    max-width: 950px;
+    background: #D1D1D1;
+    border-radius: 20px;
+    width: 100%;
+    padding: 50px;
+
+    @include adpt($big-r) {
+      max-width: 800px;
+    }
+
+    @include adpt($tab-r) {
+      padding: 20px;
+    }
+  }
+
+  &__inner {
+    padding: 100px 0;
+    max-width: 624px;
+    margin: 0 auto;
+
+    @include adpt($big-r) {
+      padding: 60px 0;
+    }
+  }
+
+  &__title {
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.27;
+    max-width: 470px;
+    margin: 0 auto 60px;
+    color: #000;
+
+    @include adpt($tab-r) {
+      font-size: 25px;
+      max-width: 305px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 30px;
+    z-index: 5;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+
+    @include adpt($bmob-r) {
+      top: 20px;
+      right: 20px;
+    }
+
+    &:hover {
+
+
+      transform: rotate(180deg);
+
+      & svg path {
+        stroke: $white;
+      }
+    }
+
+    &:active {
+
+      transform: rotate(180deg) scale(0.8);
+
+      & svg path {
+        stroke: $white;
+      }
+    }
+  }
+
+  &__close-img {
+    width: 10px;
+    height: 10px;
+    object-fit: contain;
+
+    & path {
+      transition: stroke 0.3s;
+    }
+  }
+}
