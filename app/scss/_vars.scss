@@ -1,0 +1,47 @@
+$accent: var(--accent-color);
+$default: var(--default-color);
+$white: var(--white-color);
+$bg: var(--bg-color);
+
+
+:root {
+  --accent-color: #00A5FA;
+  --default-color: #212121;
+  --white-color: #ffffff;
+  --green-color: #18AE00; 
+  --bg-color: #000000; 
+
+
+
+  --main-font: 'Montserrat', sans-serif;
+  --second-font: 'Inter', sans-serif;
+
+}
+
+
+
+$big-r: 1380;
+$desm-r: 1280;
+$tab-r: 1024;
+$mtab-r: 992;
+$stab-r: 768;
+$bmob-r: 576;
+
+
+
+
+@mixin adpt($width) {
+  @media (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin adpt-mob($width) {
+  @media (min-width: #{$width}px) {
+    @content;
+  }
+}
+
+@include adpt ($bmob-r) {
+
+}
