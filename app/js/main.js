@@ -200,7 +200,7 @@ $(function () {
       this.appendChild(wave)
 
       // Remove element after animation ends
-      setTimeout(() => wave.remove(), 500)
+      setTimeout(() => wave.remove(), 700)
     })
   })
   //btn-hover
