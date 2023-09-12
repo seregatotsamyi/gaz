@@ -1,0 +1,162 @@
+.header-top {
+  background-color: $headers;
+  color: $white;
+
+  @include adpt ($tab-r) {
+    padding: 3px 0;
+  }
+
+  @include adpt ($stab-r) {
+    padding-bottom: 15px;
+  }
+
+  & .container {
+    @include adpt ($bmob-r) {
+      padding: 0 14px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    @include adpt ($bmob-r) {
+      padding: 0 4px;
+    }
+  }
+
+  &__right-item {
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include adpt ($bmob-r) {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  &__right-link {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.25;
+    line-height: 20px;
+
+    @include adpt ($tab-r) {
+      font-size: 14px;
+      line-height: 1.58;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 2px;
+      background-color: $white;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: stretch;
+
+    @include adpt ($bmob-r) {
+      width: 100%;
+    }
+  }
+
+  &__left-wrap {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-gap: 40px;
+    padding: 0 20px;
+    transition: background-color 0.3s;
+    margin-left: -20px;
+
+    @include adpt ($tab-r) {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: row;
+      grid-gap: 10px;
+      margin-left: 0;
+      padding: 0;
+    }
+
+    @include adpt ($stab-r) {
+      margin-bottom: 14px;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: auto auto;
+      grid-gap: 10px 0;
+      width: 100%;
+    }
+
+    &._active {
+      background-color: #383838;
+
+      @include adpt ($tab-r) {
+        background-color: transparent;
+      }
+
+      & .phone-block_in-drop {
+        @include adpt ($tab-r) {
+          background-color: #383838;
+          border-radius: 4px 4px 0 0;
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 15px 0;
+
+    @include adpt ($tab-r) {
+      padding: 12px 6px;
+    }
+
+    @include adpt ($stab-r) {
+      padding: 12px 6px 1px;
+    }
+
+    &._mb {
+      display: none;
+
+      @include adpt ($tab-r) {
+        display: block;
+      }
+    }
+
+    &._ds {
+      @include adpt ($tab-r) {
+        display: none;
+      }
+    }
+
+  }
+}

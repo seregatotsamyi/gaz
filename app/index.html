@@ -3,35 +3,179 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Gaz</title>
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="libs/select2.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="body" id="body">
 
 <header class="header">
 
+  <div class="header-top">
+    <div class="container">
+      <div class="header-top__inner">
 
-  <div class="header__inner ">
+        <div class="header-top__left">
 
+          <div class="header-top__left-wrap" id="_in-mark">
+
+            <div class="header-top__item phone-block">
+              <a class="phone-block__link" href="tel:84956605468">
+                <img class="phone-block__icon" src="images/icon/phone.svg" alt="phone" width="20" height="20">
+                <span class="phone-block__link-text text">
+                  8 495 660-54-68
+                </span>
+              </a>
+
+              <a class="phone-block__text-popup popup--link" href="#popup">
+                Заказать звонок
+              </a>
+
+            </div>
+
+            <div class="header-top__item phone-block">
+              <a class="phone-block__link" href="tel:89161208020">
+                <img class="phone-block__icon" src="images/icon/phone.svg" alt="phone" width="20" height="20">
+                <span class="phone-block__link-text text">
+                  8 916 120-80-20
+                </span>
+              </a>
+
+              <ul class="phone-block__list">
+                <li class="phone-block__item">
+                  <a class="phone-block__social-link" href="#">
+                    <img class="phone-block__social-img" src="images/social/Whatsapp.svg" alt="Whatsapp.svg" width="20"
+                      height="20">
+                    <span class="phone-block__social-text">
+                      WhatsApp
+                    </span>
+                  </a>
+                </li>
+                <li class="phone-block__item">
+                  <a class="phone-block__social-link" href="#">
+                    <img class="phone-block__social-img" src="images/social/telegram.svg" alt="telegram.svg" width="20"
+                      height="20">
+                    <span class="phone-block__social-text">
+                      Telegram
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="header-top__item phone-block phone-block_in-drop">
+              <button class="phone-block__btn js-open-about-email" type="button">
+                <img class="phone-block__icon" src="images/icon/email.svg" alt="email.svg" width="20" height="20">
+                <span class="phone-block__link-text">
+                  info@gazzachas.ru
+                </span>
+              </button>
+
+              <a class="phone-block__text-popup " href="#">
+                Написать нам
+              </a>
+
+              <div class="phone-block__dropdown" id="phone-block-dropdown">
+                <ul class="phone-block__dropdown-list">
+                  <li class="phone-block__dropdown-item text">
+                    <span>Для просчета стоимости заказа по email напишите нам на</span>
+                    <a href="mailto:info@gazzachas.ru">
+                      info@gazzachas.ru
+                    </a>
+                  </li>
+                  <li class="phone-block__dropdown-item text">
+                    <span>Ваше коммерческое предложение присылайте нам на</span>
+                    <a href="mailto:com@gazzachas.ru">
+                      com@gazzachas.ru
+                    </a>
+                  </li>
+                  <li class="phone-block__dropdown-item text">
+                    <span>Решение спорных вопросов напрямую с директором </span>
+                    <a href="mailto:dir@gazzachas.ru">
+                      dir@gazzachas.ru
+                    </a>
+                  </li>
+                </ul>
+                <div class="phone-block__dropdown-bottom">
+                  <span class="text">Прием онлайн-заказов с 8.00 до 19.00 без выходных</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="header-top__item city-block _mb">
+              <select class="js-city-select city-block__select" name="state">
+                <option value="mos">Москва</option>
+                <option value="him">Химки</option>
+                <option value="kl">Клин</option>
+                <option value="el">Электросталь</option>
+                <option value="zen">Зеленоград</option>
+                <option value="sp">Сергиев Посад</option>
+                <option value="shel">Щелково</option>
+                <option value="zenl">Зеленоград</option>
+              </select>
+            </div>
+
+          </div>
+
+          <div class="header-top__item city-block _ds">
+            <select class="js-city-select city-block__select" name="state">
+              <option value="mos">Москва</option>
+              <option value="him">Химки</option>
+              <option value="kl">Клин</option>
+              <option value="el">Электросталь</option>
+              <option value="zen">Зеленоград</option>
+              <option value="sp">Сергиев Посад</option>
+              <option value="shel">Щелково</option>
+              <option value="zenl">Зеленоград</option>
+            </select>
+          </div>
+
+        </div>
+
+        <ul class="header-top__right">
+          <li class="header-top__right-item">
+            <a class="header-top__right-link" href="#">
+              Доставка
+            </a>
+          </li>
+          <li class="header-top__right-item">
+            <a class="header-top__right-link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
   </div>
 
-  
-  <div class="header__inner ">
-
+  <div class="header-info">
+    <div class="container">
+      <div class="header-info__inner">
+        <span class="header-info__text">
+          Время работы склада 2-й Южнопортовый пр-д, д.10с19: с 10.00 до 19.00
+        </span>
+        <ul class="header-info__list">
+          <li class="header-info__item">
+            <a class="header-info__link" href="#">
+              Карта проезда
+            </a>
+          </li>
+          <li class="header-info__item">
+            <a class="header-info__link" href="#">
+              Все склады
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-
-
-  
-  <div class="header__inner  header__inner_small">
-
-  </div>
-  
-  <div class="header__inner ">
-
-  </div>
-
 
 </header>
 
@@ -41,8 +185,291 @@
 
 <footer class="footer">
 
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__inner-wrap">
+          <div class="footer__main">
+            <a class="footer__logo logo" href="#">
+              <img class="logo__img" src="images/logo.svg" alt="logo" width="189" height="85">
+            </a>
+            <p class="footer__about">
+              <span>Прием онлайн-заказов </span>
+              <span> с 8.00 до 19.00 без выходных</span>
+            </p>
+            <ul class="footer__yandex">
+              <li class="footer__yandex-item">
+                <a class="footer__yandex-link" href="#">
+                  <img class="footer__yandex-img" src="images/yandex/1.svg" alt="yandex" width="87" height="35">
+                </a>
+              </li>
+              <li class="footer__yandex-item">
+                <a class="footer__yandex-link" href="#">
+                  <img class="footer__yandex-img" src="images/yandex/2.svg" alt="yandex" width="98" height="28">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__info">
+
+            <div class="footer__info-item phone-block">
+              <a class="phone-block__link" href="tel:84956605468">
+                <img class="phone-block__icon" src="images/icon/phone.svg" alt="phone" width="20" height="20">
+                <span class="phone-block__link-text text">
+                  8 495 660-54-68
+                </span>
+              </a>
+
+              <a class="phone-block__text-popup popup--link" href="#popup">
+                Заказать звонок
+              </a>
+
+            </div>
+
+            <div class="footer__info-item phone-block">
+              <a class="phone-block__link" href="tel:89161208020">
+                <img class="phone-block__icon" src="images/icon/phone.svg" alt="phone" width="20" height="20">
+                <span class="phone-block__link-text text">
+                  8 916 120-80-20
+                </span>
+              </a>
+
+              <ul class="phone-block__list">
+                <li class="phone-block__item">
+                  <a class="phone-block__social-link" href="#">
+                    <img class="phone-block__social-img" src="images/social/Whatsapp.svg" alt="Whatsapp.svg" width="20"
+                      height="20">
+                    <span class="phone-block__social-text">
+                      WhatsApp
+                    </span>
+                  </a>
+                </li>
+                <li class="phone-block__item">
+                  <a class="phone-block__social-link" href="#">
+                    <img class="phone-block__social-img" src="images/social/telegram.svg" alt="telegram.svg" width="20"
+                      height="20">
+                    <span class="phone-block__social-text">
+                      Telegram
+                    </span>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+
+            <div class="footer__info-item phone-block">
+              <a class="phone-block__link" href="mailto:84956605468">
+                <img class="phone-block__icon" src="images/icon/email.svg" alt="phone" width="20" height="20">
+                <span class="phone-block__link-text text">
+                  info@gazzachas.ru
+                </span>
+              </a>
+
+              <a class="phone-block__text-popup" href="#">
+                Написать нам
+              </a>
+
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="footer__nav">
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Технические газы
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Аргон
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Азот
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Кислород
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Пропан
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Углекислота
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Сварочная смесь
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Ацетилен
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Жидкий аргон
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Жидкий азот
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Жидкий кислород
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Жидкая углекислота
+              </a>
+            </li>
+          </ul>
+
+          <div class="footer__wrap-list">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Газовое оборудование
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Газовые баллоны
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Криогенные емкости
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Всё для сварки
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Автономная газификация
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Обмен баллонов
+                </a>
+              </li>
+
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Покупателям
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  О компании
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Услуги
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Доставка
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Оплата
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Гарантия и возврат
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Вопросы и ответы
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Отзывы
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Вакансии
+                </a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">
+                  Контакты
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__copyright">
+    <div class="container">
+      <div class="footer__copyright-text">
+        © Все права защищены
+      </div>
+    </div>
+  </div>
+
 </footer>
 
+<div id="popup" class="popup">
+  <div class="popup__body">
+    <div class="popup__content feedback__content">
+      <a href="#" class="popup__close popup--close">
+        <svg class="popup__close-img" width="12" height="12" viewBox="0 0 12 12" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 1L1 11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M11 11L1 1" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+
+      <div class="popup__inner">
+        <div class="popup__title">
+          Выберите удобный для Вас способ оценки товара:
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="libs/jquery.min.js"></script>
+<script src="libs/swiper-bundle.min.js"></script>
+<script src="libs/select2.full.min.js"></script>
 <script src="js/main.min.js"></script>
 </body>
 

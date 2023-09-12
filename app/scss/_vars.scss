@@ -1,27 +1,37 @@
-$accent: var(--accent-color);
-$default: var(--default-color);
+$red: var(--red-color);
+$yellow: var(--yellow-color);
 $white: var(--white-color);
+$text: var(--text-color);
+$headers: var(--headers-color);
 $bg: var(--bg-color);
+$whatsapp: var(--whatsapp-color);
+$grey: var(--grey-color);
+$lightGrey: var(--light-grey-color);
+
+$mainFont: var(--main-font);
 
 
 :root {
-  --accent-color: #00A5FA;
-  --default-color: #212121;
+  --red-color: #B9201F;
+  --text-color: #666;
+  --headers-color: #333;
+  --yellow-color: #EA9309;
   --white-color: #ffffff;
-  --green-color: #18AE00; 
-  --bg-color: #000000; 
-
+  --whatsapp-color: #43D854;
+  --bg-color: #F8F8F8;
+  --grey-color: #EEEDED;
+  --light-grey-color: #F1F1F1;
 
 
   --main-font: 'Montserrat', sans-serif;
-  --second-font: 'Inter', sans-serif;
-
+  --second-font: 'Roboto', sans-serif;
 }
 
 
 
 $big-r: 1380;
 $desm-r: 1280;
+$desmr-r: 1270;
 $tab-r: 1024;
 $mtab-r: 992;
 $stab-r: 768;
@@ -42,6 +52,4 @@ $bmob-r: 576;
   }
 }
 
-@include adpt ($bmob-r) {
-
-}
+@include adpt ($bmob-r) {}

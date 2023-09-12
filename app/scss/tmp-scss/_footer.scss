@@ -1,4 +1,244 @@
 .footer {
   position: relative;
   margin-top: auto;
+
+  &__top {
+    padding: 50px 0 30px;
+    background-color: $headers;
+    color: $white;
+
+    @include adpt ($bmob-r) {
+      padding: 20px 0 25px;
+    }
+  }
+
+  &__copyright {
+    padding: 8px 0;
+    background-color: $lightGrey;
+  }
+
+  &__copyright-text {
+    opacity: 0.8;
+
+    @include adpt ($bmob-r) {
+      text-align: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include adpt ($tab-r) {
+      flex-direction: column;
+    }
+
+    @include adpt ($bmob-r) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include adpt ($tab-r) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 0;
+      margin-top: 35px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__main {
+    width: 100%;
+    max-width: 230px;
+    margin-right: 55px;
+
+    @include adpt ($bmob-r) {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__about {
+    margin-bottom: 40px;
+
+    & span {
+      display: block;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__yandex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__yandex-item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__info {
+    max-width: 200px;
+    margin-right: 60px;
+    width: 100%;
+
+    @include adpt ($tab-r) {
+      margin-right: 0;
+    }
+
+    @include adpt ($bmob-r) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 100%;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__info-item {
+    @include adpt ($bmob-r) {
+      margin: 0;
+      text-align: center;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include adpt ($bmob-r) {
+        margin-right: 24px;
+      }
+    }
+
+    &:last-child {
+      @include adpt ($bmob-r) {
+        margin: 0 auto;
+      }
+    }
+
+    & .phone-block__list {
+      @include adpt ($bmob-r) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include adpt ($bmob-r) {
+      width: 100%;
+    }
+
+  }
+
+  &__list {
+    width: fit-content;
+    margin-right: 52px;
+
+    @include adpt ($desm-r) {
+      margin-right: 40px;
+    }
+
+    @include adpt ($bmob-r) {
+      margin-right: 0;
+      flex: 1;
+    }
+  }
+
+  &__wrap-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include adpt ($bmob-r) {
+      flex-direction: column;
+      margin-left: 32px;
+      flex: 1;
+    }
+
+    & ul:last-child {
+      margin-right: 0;
+
+      @include adpt ($bmob-r) {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 1.33;
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+      line-height: 1.66;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  &__item {
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 6px;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: 20px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 15px;
+      }
+
+      & a {
+        font-size: 20px;
+        line-height: 1.25;
+        opacity: 0.3;
+        white-space: nowrap;
+
+        @include adpt ($desm-r) {
+          white-space: wrap;
+        }
+
+        @include adpt ($tab-r) {
+          font-size: 18px;
+        }
+
+        @include adpt ($bmob-r) {
+          font-size: 14px;
+          line-height: 1.35;
+        }
+      }
+    }
+
+
+  }
+
 }

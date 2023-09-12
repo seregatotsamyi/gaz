@@ -8,6 +8,26 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $text transparent;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $text;
+    border-radius: 30px;
+    border: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+
 ul,
 ol {
   padding: 0;
@@ -66,16 +86,16 @@ button {
 }
 
 ::selection {
-  background: $accent;
+  background: $red;
   color: $white;
 }
 
 ::-moz-selection {
-  background: $accent;
+  background: $red;
   color: $white;
 }
 
 ::-webkit-selection {
-  background: $accent;
+  background: $red;
   color: $white;
 }
