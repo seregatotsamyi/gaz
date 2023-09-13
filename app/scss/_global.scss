@@ -70,6 +70,9 @@ body {
   position: absolute;
 }
 
+._fixed {
+  overflow: hidden;
+}
 
 ._shadow {
   position: relative;
@@ -85,6 +88,20 @@ body {
     opacity: 0.3;
     z-index: 9;
     pointer-events: none;
+  }
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  &__img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
   }
 }
 

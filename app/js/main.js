@@ -182,6 +182,23 @@ $(function () {
 
   //click outside
 
+  //mob-menu
+  const mobMenu = $('#mobMenu')
+  const toggleMobMenuBtns = $('.js-toggle-mob-menu')
+  toggleMobMenuBtns.on('click', toggleMibMenu)
+
+  function toggleMibMenu(){
+    mobMenu.toggleClass('_open')
+    body.toggleClass('_fixed')
+  }
+
+  //mob-menu
+
+  //slinky js
+  const slinky = $(".js-mob-navigation").slinky({
+    title: true
+  })
+  //slinky js
 
   //btn-hover
   const btns = document.querySelectorAll('.button')
