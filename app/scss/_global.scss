@@ -111,3 +111,65 @@ body {
     opacity: 0;
   }
 }
+
+.big-title {
+  font-family: $secondFont;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: 1.35px;
+
+  @include adpt ($big-r) {
+    font-size: 42px;
+  }
+
+  @include adpt ($tab-r) {
+    font-size: 40px;
+    letter-spacing: 1.1px;
+  }
+
+  @include adpt ($stab-r) {
+    font-size: 35px;
+  }
+
+  @include adpt ($bmob-r) {
+    font-size: 30px;
+    letter-spacing: 1.2px;
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 23px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.48px;
+  line-height: 1.66;
+  text-align: center;
+  color: $white;
+  background-color: $red;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+  @include adpt ($bmob-r) {
+    padding: 10px 13px;
+  }
+
+  &:active {
+    border-color: $white;
+    color: $red;
+    background-color: $white;
+  }
+
+  &_2 {
+    background-color: $white;
+    color: $red;
+
+    &:hover {
+      color: $white;
+      background-color: $red;
+    }
+  }
+}

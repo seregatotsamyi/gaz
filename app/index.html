@@ -318,7 +318,7 @@
 
         <ul class="header__right">
           <li class="header__right-item">
-            <button class="header__right-link" type="button">
+            <button class="header__right-link js-search-toggle" type="button">
               <img class="header__right-icon" src="images/icon/search-r.svg" alt="search" width="20" height="20">
             </button>
           </li>
@@ -474,9 +474,160 @@
 
   </div>
 </div>
+<div class="search" id="search-block">
+
+  <div class="search__wrap">
+    <div class="search__inner">
+      <button class="search__close js-search-toggle" type="button">
+        <img class="search__close-icon" src="images/icon/close-red.svg" alt="close-red" width="16" height="16">
+      </button>
+      <div class="search__input-block">
+        <form class="search__input-wrap">
+          <input class="search__input" type="text" placeholder="Быстрый поиск">
+          <button class="search__btn ">
+            <img class="search__btn-icon" src="images/icon/search-white.svg" alt="search-white.svg" width="20"
+              height="20">
+          </button>
+        </form>
+        <span class="search__input-text">
+          Введите запрос в поиск или воспользуйтесь готовыми подсказками
+        </span>
+      </div>
+      <ul class="search__hints">
+        <li class="search__hints-item">
+          <a class="search__hints-link" href="#">
+            Газообразный пропан
+          </a>
+        </li>
+        <li class="search__hints-item">
+          <a class="search__hints-link" href="#">
+            Пропан в баллонах
+          </a>
+        </li>
+        <li class="search__hints-item">
+          <a class="search__hints-link" href="#">
+            Пропан технический
+          </a>
+        </li>
+        <li class="search__hints-item">
+          <a class="search__hints-link" href="#">
+            Пропан заправка тары
+          </a>
+        </li>
+        <li class="search__hints-item">
+          <a class="search__hints-link" href="#">
+            Пропан для сварки
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
 
 
 <main class="main">
+
+  <section class="promo-slider">
+    <div class="promo-slider__slider js-promo-slider">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide promo-slider__slide-wrap " style="background-image: url('images/promo-slider/1.jpg');">
+
+          <div class="promo-slider__slide container">
+            <div class="promo-slider__content">
+
+              <div class="promo-slider__content-top">
+                <span class="promo-slider__category">
+                  Продукция
+                </span>
+                <div class="promo-slider__title big-title">
+                  Технические газы<br>
+                  по выгодным ценам 
+                </div>
+              </div>
+
+              <div class="promo-slider__content-bottom">
+                <div class="promo-slider__text">
+                  У нас можно купить технические газы в любом объеме. Поставки ежедневно до 500 баллонов Самовывоз со
+                  склада
+                </div>
+                <div class="promo-slider__btns">
+                  <a class="promo-slider__btn btn button" href="#">
+                    Заявка на рассчёт
+                  </a>
+                  <a class="promo-slider__btn btn btn_2 button" href="#">
+                    Консультация
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+        <div class="swiper-slide promo-slider__slide-wrap " style="background-image: url('images/promo-slider/1.jpg');">
+
+          <div class="promo-slider__slide container">
+            <div class="promo-slider__content">
+
+              <div class="promo-slider__content-top">
+                <span class="promo-slider__category">
+                  Продукция
+                </span>
+                <div class="promo-slider__title big-title">
+                  Технические газы<br>
+                  по выгодным ценам 2
+                </div>
+              </div>
+
+              <div class="promo-slider__content-bottom">
+                <div class="promo-slider__text">
+                  У нас можно купить технические газы в любом объеме. Поставки ежедневно до 500 баллонов Самовывоз со
+                  склада
+                </div>
+                <div class="promo-slider__btns">
+                  <a class="promo-slider__btn btn button" href="#">
+                    Заявка на рассчёт
+                  </a>
+                  <a class="promo-slider__btn btn btn_2 button" href="#">
+                    Консультация
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="promo-slider__option">
+        <div class="promo-slider__pagination"></div>
+
+        <div class="promo-slider__arrow-wrap">
+          <div class="promo-slider__arrow promo-slider__arrow_prev">
+            <svg class="promo-slider__arrow-icon" width="8" height="15" viewBox="0 0 8 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1L1 7.74074L7 14" stroke="#B9201F" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="promo-slider__arrow promo-slider__arrow_next">
+            <svg class="promo-slider__arrow-icon" width="8" height="15" viewBox="0 0 8 15" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 1L1 7.74074L7 14" stroke="#B9201F" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
 </main>
 
@@ -878,8 +1029,8 @@
   </div>
 </div>
 
-<script src="libs/jquery.min.js"></script>
 <script src="libs/swiper-bundle.min.js"></script>
+<script src="libs/jquery.min.js"></script>
 <script src="libs/select2.full.min.js"></script>
 <script src="libs/slinky.min.js"></script>
 <script src="js/main.min.js"></script>

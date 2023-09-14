@@ -175,8 +175,17 @@ $(function () {
       if (phoneBlockDropdown.hasClass('_active')) {
         openAboutEmail()
       }
-
     }
+
+    const searchWrap = $('.search__wrap')
+    if (!searchWrap.is(e.target) &&
+      searchWrap.has(e.target).length === 0 && !searchToggleBtns.is(e.target) &&
+      searchToggleBtns.has(e.target).length === 0) {
+      if (searchBlock.hasClass('_open')) {
+        searchToggle()
+      }
+    }
+
 
   });
 
@@ -187,12 +196,24 @@ $(function () {
   const toggleMobMenuBtns = $('.js-toggle-mob-menu')
   toggleMobMenuBtns.on('click', toggleMibMenu)
 
-  function toggleMibMenu(){
+  function toggleMibMenu() {
     mobMenu.toggleClass('_open')
     body.toggleClass('_fixed')
   }
 
   //mob-menu
+
+
+  //search-toggle
+  const searchToggleBtns = $('.js-search-toggle')
+  const searchBlock = $('#search-block')
+  searchToggleBtns.on('click', searchToggle)
+
+  function searchToggle() {
+    searchBlock.toggleClass('_open')
+    body.toggleClass('_fixed')
+  }
+  //search-toggle
 
   //slinky js
   const slinky = $(".js-mob-navigation").slinky({
@@ -221,4 +242,19 @@ $(function () {
     })
   })
   //btn-hover
+
+  //promo-slider
+  const promoSlider = new Swiper('.js-promo-slider', {
+    loop: true,
+    navigation: {
+      nextEl: '.promo-slider__arrow_next',
+      prevEl: '.promo-slider__arrow_prev',
+    },
+    pagination: {
+      el: '.promo-slider__pagination',
+      type: 'bullets',
+      clickable: true
+    },
+  });
+  //promo-slider
 });
