@@ -41,6 +41,7 @@
     width: calc((100% - 610px)/2);
     position: absolute;
     top: 50%;
+    pointer-events: none;
     transform: translateY(-50%);
 
     @include adpt ($tab-r) {

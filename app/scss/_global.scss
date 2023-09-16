@@ -173,3 +173,34 @@ body {
     }
   }
 }
+
+.categories-span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: $secondFont;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.13;
+  color: $headers;
+
+  @include adpt ($big-r) {
+    font-size: 28px;
+  }
+
+  @include adpt ($tab-r) {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  @include adpt ($stab-r) {
+    font-size: 24px;
+  }
+
+  @include adpt ($bmob-r) {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+}
