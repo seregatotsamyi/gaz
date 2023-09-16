@@ -1,0 +1,78 @@
+.prcatalog {
+  padding: 40px 0 30px;
+  background-image: url('../images/prcatalog.jpg ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include adpt ($stab-r) {
+    padding: 44px 0;
+    background-position: 69% 0%;
+  }
+
+  @include adpt ($bmob-r) {
+    background-position: 66% 0%;
+  }
+
+  &__inner {
+    max-width: 880px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: $white;
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-style: $secondFont;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    max-width: 380px;
+    margin-right: 20px;
+
+    @include adpt ($stab-r) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__content {
+    max-width: 300px;
+    text-align: right;
+
+    @include adpt ($stab-r) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+
+    @include adpt ($stab-r) {
+      margin-bottom: 35px;
+      max-width: 302px;
+      margin-left: auto;
+    }
+  }
+
+  &__btn {
+    @include adpt ($bmob-r) {
+      position: relative;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+
+}
