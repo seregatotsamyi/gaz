@@ -1,0 +1,107 @@
+.order-payment {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+
+  @include adpt ($stab-r) {
+    padding: 30px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    margin-right: 50px;
+
+    @include adpt ($tab-r) {
+      font-size: 14px;
+    }
+
+    @include adpt ($stab-r) {
+      margin-right: 0;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    @include adpt ($bmob-r) {
+      max-width: 266px;
+    }
+  }
+
+  &__decor {
+    height: 119px;
+    width: calc((100% - 610px)/2);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include adpt ($tab-r) {
+      width: calc((100% - 550px)/2);
+    }
+
+    @include adpt ($stab-r) {
+      width: calc((100% - 170px)/2);
+      transform: translateY(0);
+      top: auto;
+      bottom: 0;
+    }
+
+    &::after {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      content: "";
+      width: 100%;
+      height: 2px;
+      background-image: url('../images/decor/stroke.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      z-index: -1;
+
+      @include adpt ($stab-r) {
+        transform: translateY(0);
+        top: auto;
+        bottom: 48px;
+      }
+    }
+
+    &::before {
+      width: 153px;
+      max-width: 100%;
+      content: "";
+      position: absolute;
+      height: 100%;
+      background-image: url('../images/decor/auto.png');
+      background-size: contain;
+      background-position: center left;
+      background-repeat: no-repeat;
+      z-index: 2;
+
+      @include adpt ($tab-r) {
+        display: none;
+      }
+    }
+
+    &._1 {
+      left: 0;
+    }
+
+    &._2 {
+      right: 0;
+      transform: scale(-1, 1) translateY(-50%);
+
+      @include adpt ($stab-r) {
+        transform: scale(-1, 1) translateY(0);
+      }
+    }
+  }
+}

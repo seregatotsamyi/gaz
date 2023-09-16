@@ -257,4 +257,28 @@ $(function () {
     },
   });
   //promo-slider
+
+
+  //promo-info-slider
+  const promoInfoSlider = new Swiper('.js-promo-info-slider', {
+    slidesPerView: 1,
+    pagination: {
+      el: '.promo-info-slider__pagination',
+      type: 'bullets',
+    },
+    breakpoints: {
+      577: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1025: {
+        slidesPerView: 4,
+        spaceBetween: 0,
+      },
+    }
+  });
+  
+  //promo-info-slider
+
+
 });

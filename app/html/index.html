@@ -21,7 +21,7 @@
                 </span>
                 <div class="promo-slider__title big-title">
                   Технические газы<br>
-                  по выгодным ценам 
+                  по выгодным ценам
                 </div>
               </div>
 
@@ -31,10 +31,10 @@
                   склада
                 </div>
                 <div class="promo-slider__btns">
-                  <a class="promo-slider__btn btn button" href="#">
+                  <a class="promo-slider__btn btn button popup--link" href="#calculation">
                     Заявка на рассчёт
                   </a>
-                  <a class="promo-slider__btn btn btn_2 button" href="#">
+                  <a class="promo-slider__btn btn btn_2 button popup--link" href="#cons">
                     Консультация
                   </a>
                 </div>
@@ -66,10 +66,10 @@
                   склада
                 </div>
                 <div class="promo-slider__btns">
-                  <a class="promo-slider__btn btn button" href="#">
+                  <a class="promo-slider__btn btn button popup--link" href="#calculation">
                     Заявка на рассчёт
                   </a>
-                  <a class="promo-slider__btn btn btn_2 button" href="#">
+                  <a class="promo-slider__btn btn btn_2 button popup--link" href="#cons">
                     Консультация
                   </a>
                 </div>
@@ -106,11 +106,101 @@
     </div>
   </section>
 
+  <section class="promo-info-slider">
+    <div class="container">
+      <div class="promo-info-slider__slider js-promo-info-slider swiper">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide promo-info-slider__wrapper">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/1.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Все газы в наличии
+                </div>
+                <p class="promo-info-slider__text">
+                  На складах более 300т технических газов ежедневно
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide promo-info-slider__wrapper _2">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/2.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Срочная доставка
+                </div>
+                <p class="promo-info-slider__text">
+                  Доставим заказ срочно от 2-х часов
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide promo-info-slider__wrapper">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/3.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Работаем без выходных
+                </div>
+                <p class="promo-info-slider__text">
+                  Принимаем заказы каждый день в рабочее время
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide promo-info-slider__wrapper _4">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/4.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Гарантия качества
+                </div>
+                <p class="promo-info-slider__text">
+                  Тех. газы и баллоны соотвествуют стандартам Гост и ТУ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="promo-info-slider__pagination"></div>
+    </div>
+  </section>
+
+  <div class="order-payment">
+    <div class="order-payment__decor _1">
+
+    </div>
+    <div class="order-payment__decor _2">
+      
+    </div>
+    <div class="container">
+      <div class="order-payment__inner">
+        <div class="order-payment__text">
+          Рассчитаем заказ и выставим счёт за 15 минут
+        </div>
+        <a class="order-payment__btn btn button popup--link" href="#calculation">
+          Заказать рассчёт
+        </a>
+      </div>
+    </div>
+  </div>
+
 </main>
 
 @include('components/_footer.html')
 
 @include('components/_popup.html')
 @include('components/_popup-cons.html')
+@include('components/_popup-calculation.html')
 
 @include('components/_footer-scripts.html')

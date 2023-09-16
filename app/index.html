@@ -544,7 +544,7 @@
                 </span>
                 <div class="promo-slider__title big-title">
                   Технические газы<br>
-                  по выгодным ценам 
+                  по выгодным ценам
                 </div>
               </div>
 
@@ -554,10 +554,10 @@
                   склада
                 </div>
                 <div class="promo-slider__btns">
-                  <a class="promo-slider__btn btn button" href="#">
+                  <a class="promo-slider__btn btn button popup--link" href="#calculation">
                     Заявка на рассчёт
                   </a>
-                  <a class="promo-slider__btn btn btn_2 button" href="#">
+                  <a class="promo-slider__btn btn btn_2 button popup--link" href="#cons">
                     Консультация
                   </a>
                 </div>
@@ -589,10 +589,10 @@
                   склада
                 </div>
                 <div class="promo-slider__btns">
-                  <a class="promo-slider__btn btn button" href="#">
+                  <a class="promo-slider__btn btn button popup--link" href="#calculation">
                     Заявка на рассчёт
                   </a>
-                  <a class="promo-slider__btn btn btn_2 button" href="#">
+                  <a class="promo-slider__btn btn btn_2 button popup--link" href="#cons">
                     Консультация
                   </a>
                 </div>
@@ -628,6 +628,95 @@
 
     </div>
   </section>
+
+  <section class="promo-info-slider">
+    <div class="container">
+      <div class="promo-info-slider__slider js-promo-info-slider swiper">
+
+        <div class="swiper-wrapper">
+          <div class="swiper-slide promo-info-slider__wrapper">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/1.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Все газы в наличии
+                </div>
+                <p class="promo-info-slider__text">
+                  На складах более 300т технических газов ежедневно
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide promo-info-slider__wrapper _2">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/2.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Срочная доставка
+                </div>
+                <p class="promo-info-slider__text">
+                  Доставим заказ срочно от 2-х часов
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide promo-info-slider__wrapper">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/3.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Работаем без выходных
+                </div>
+                <p class="promo-info-slider__text">
+                  Принимаем заказы каждый день в рабочее время
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide promo-info-slider__wrapper _4">
+            <div class="promo-info-slider__slide">
+              <img class="promo-info-slider__img" src="images/promo-info-slider/4.jpg" width="70" height="70"
+                alt="promo-info-slider">
+              <div class="promo-info-slider__content">
+                <div class="promo-info-slider__title">
+                  Гарантия качества
+                </div>
+                <p class="promo-info-slider__text">
+                  Тех. газы и баллоны соотвествуют стандартам Гост и ТУ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="promo-info-slider__pagination"></div>
+    </div>
+  </section>
+
+  <div class="order-payment">
+    <div class="order-payment__decor _1">
+
+    </div>
+    <div class="order-payment__decor _2">
+      
+    </div>
+    <div class="container">
+      <div class="order-payment__inner">
+        <div class="order-payment__text">
+          Рассчитаем заказ и выставим счёт за 15 минут
+        </div>
+        <a class="order-payment__btn btn button popup--link" href="#calculation">
+          Заказать рассчёт
+        </a>
+      </div>
+    </div>
+  </div>
 
 </main>
 
@@ -1022,6 +1111,73 @@
         </div>
         <button class="popup__btn text button" type="submit">
           Отправить
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>
+<div id="calculation" class="popup">
+  <div class="popup__body">
+    <div class="popup__content feedback__content">
+      <a href="#" class="popup__close popup--close">
+        <svg class="popup__close-img" width="18" height="18" viewBox="0 0 18 18" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L9 9M17 17L9 9M9 9L17 1L1 17" stroke="#EA9309" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+      </a>
+
+      <form class="popup__inner">
+        <div class="popup__title">
+          Заявка на рассчёт
+        </div>
+        <div class="popup__text">
+          Оставьте свою заявку и мы рассчитаем заказ и выставим счёт за 15 минут
+        </div>
+
+        <div class="popup__input-inner">
+          <div class="popup__input input">
+            <label class="input__label text" for="d1">
+              Имя
+            </label>
+            <div class="input__wrap-input">
+              <input class="input__input" type="text" id="d1" placeholder="Ваше имя">
+            </div>
+          </div>
+          <div class="popup__input input">
+            <label class="input__label text" for="d2">
+              Телефон
+            </label>
+            <div class="input__wrap-input">
+              <input class="input__input" type="tel" id="d2" placeholder="+7 (999) 999-99-99">
+            </div>
+          </div>
+          <div class="popup__input input">
+            <label class="input__label text" for="d3">
+              E-mail
+            </label>
+            <div class="input__wrap-input">
+              <input class="input__input" type="email" id="d3" placeholder="Ваш e-mail">
+            </div>
+          </div>
+          <div class="popup__input input">
+            <label class="input__label text" for="d4">
+              Опишите свой заказ
+            </label>
+            <div class="input__wrap-input">
+              <textarea class="input__input input__input_textarea" id="d4"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="popup__check">
+          <input class="popup__check-input" type="checkbox" id="check-1">
+          <label class="popup__check-label" for="check-1">
+            <span>Заполняя форму, вы даете согласие на обработку персональных данных</span>
+          </label>
+        </div>
+        <button class="popup__btn text button" type="submit">
+          Получить рассчёт
         </button>
 
       </form>

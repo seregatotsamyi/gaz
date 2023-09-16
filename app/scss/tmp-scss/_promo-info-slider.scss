@@ -1,0 +1,119 @@
+.promo-info-slider {
+  position: relative;
+  padding: 72px 0 90px;
+  background-color: #F8F8F8;
+
+  @include adpt ($tab-r) {
+    padding: 50px 0 65px;
+    overflow: hidden;
+  }
+
+  &__slider {
+    @include adpt ($tab-r) {
+      overflow: visible;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 20px;
+
+    @include adpt ($big-r) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include adpt ($tab-r) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+
+  &__title {
+    font-family: $secondFont;
+    font-weight: 500;
+    font-size: 16px;
+    color: $headers;
+    margin-bottom: 18px;
+    line-height: 1.25;
+
+    @include adpt ($big-r) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    @include adpt ($big-r) {
+      font-size: 13px;
+    }
+
+    @include adpt ($tab-r) {
+      font-size: 14px;
+    }
+  }
+
+  &__wrapper {
+    height: auto;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    &:not(:last-child) {
+      padding-right: 11px;
+
+      @include adpt ($tab-r) {
+        padding-right: 0;
+      }
+    }
+
+    &._2 {
+      max-width: 280px;
+
+      @include adpt ($tab-r) {
+        max-width: initial;
+      }
+    }
+
+    &._4 {
+      min-width: 333px;
+
+      @include adpt ($tab-r) {}
+    }
+  }
+
+  &__pagination {
+    @include adpt ($tab-r) {
+      position: absolute;
+      z-index: 10;
+      height: 4px;
+      bottom: 30px !important;
+      left: 20px !important;
+      width: calc(100% - 40px) !important;
+      display: flex;
+      align-items: center;
+
+      & span {
+        margin: 0 !important;
+        opacity: 1;
+        height: 4px;
+        flex: 1;
+        border-radius: 20px;
+        opacity: 0.5;
+        background-color: $grey;
+        transition: background-color 0.3s;
+
+        &.swiper-pagination-bullet-active {
+          background-color: $text;
+        }
+      }
+    }
+  }
+}
