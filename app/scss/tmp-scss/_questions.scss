@@ -1,0 +1,135 @@
+.questions {
+  padding: 65px 0;
+  background-color: $bg;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    overflow: hidden;
+  }
+
+  &__item {
+    box-shadow: 0 0 0 1px $grey;
+    background-color: $white;
+    padding: 15px 30px;
+    transition: padding-bottom 0.3s;
+
+    @include adpt ($stab-r) {
+      padding: 10px 30px;
+    }
+
+    @include adpt ($bmob-r) {
+      padding: 5px 10px 5px 30px;
+    }
+
+    &._active {
+      padding-bottom: 30px;
+
+      @include adpt ($stab-r) {
+        padding-bottom: 25px;
+      }
+
+      @include adpt ($bmob-r) {
+        padding-bottom: 20px;
+      }
+
+      & .questions__icon {
+        &._1 {
+          opacity: 0;
+        }
+
+        &._2 {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+
+      & .questions__btn-left {
+        color: $red;
+      }
+    }
+  }
+
+  &__icon-wrap {
+    width: 17px;
+    height: 21px;
+    position: relative;
+  }
+
+  &__icon {
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+
+    &._2 {
+      opacity: 0;
+    }
+  }
+
+  &__btn {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  &__btn-left {
+    position: relative;
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $headers;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: color 0.3s;
+
+    @include adpt ($bmob-r) {
+      padding-left: 0;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      top: 10px;
+      width: 32px;
+      height: 1px;
+      background-color: $yellow;
+
+      @include adpt ($bmob-r) {
+        width: 19px;
+      }
+    }
+  }
+
+  &__text {
+    padding: 0 10px;
+    display: none;
+
+    @include adpt ($bmob-r) {
+      padding: 0;
+    }
+  }
+}

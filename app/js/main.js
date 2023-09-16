@@ -357,6 +357,13 @@ $(function () {
     },
 
   });
-
   //js-recommendation-slider
+
+  //spoiler
+  $(document).on('click','.questions__btn',function (e) {
+		e.preventDefault()
+		$(this).parents('.questions__item').toggleClass("_active").find('.questions__text').slideToggle();
+	})
+
+  //spoiler
 });
