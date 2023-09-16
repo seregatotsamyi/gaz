@@ -115,12 +115,28 @@ $(function () {
   let width = $(window).width();
   let body = $('.body');
 
+  //header-fix
+  let headerFix = $('#header-fix')
+  $(window).scroll(function (event) {
+    let scroll = $(window).scrollTop();
+    if (scroll>400){
+      headerFix.addClass('_open')
+      headerFix.removeClass('_close')
+    } else {
+      headerFix.removeClass('_open')
+      headerFix.addClass('_close')
+      if (wrapHeaderLeft.hasClass('_active')){
+        openAboutEmail()
+      }
+    }
+});
+  //header-fix
 
   //js-open-about-email
 
   const openAboutEmailBtn = $('.js-open-about-email')
   const wrapHeaderLeft = $('#_in-mark')
-  const phoneBlockDropdown = $('#phone-block-dropdown')
+  const phoneBlockDropdown = $('.phone-block-dropdown')
 
   openAboutEmailBtn.on('click', openAboutEmail)
 
@@ -277,7 +293,7 @@ $(function () {
       },
     }
   });
-  
+
   //promo-info-slider
 
 

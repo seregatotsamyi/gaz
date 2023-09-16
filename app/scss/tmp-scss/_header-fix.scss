@@ -1,0 +1,140 @@
+.header-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  background-color: $headers;
+  color: $white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+
+  &._close {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+  }
+
+  &._open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include adpt ($tab-r) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @include adpt ($tab-r) {
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    @include adpt ($stab-r) {
+      justify-content: space-between;
+    }
+  }
+
+  &__right {
+    @include adpt ($tab-r) {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    @include adpt ($stab-r) {
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 60px;
+
+      @include adpt ($tab-r) {
+        margin-right: 0;
+      }
+    }
+
+    &._ds {
+      @include adpt ($tab-r) {
+        display: none;
+      }
+    }
+
+    &._mob {
+      display: none;
+
+      @include adpt ($tab-r) {
+        display: block;
+      }
+    }
+  }
+
+  & .phone-block__dropdown {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  & .phone-block__link {
+    margin-bottom: 0;
+    margin-right: 15px;
+
+    @include adpt ($tab-r) {
+      margin-right: 0;
+    }
+  }
+
+  & .phone-block__list {
+    margin: 0;
+
+    &._mob {
+      display: none;
+
+      @include adpt ($tab-r) {
+        display: flex;
+      }
+    }
+  }
+
+  & .phone-block__social-img {
+    margin: 0;
+  }
+
+  & .phone-block__btn {
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  & .header-top__right-item:not(:last-child) {
+    @include adpt ($tab-r) {
+      margin-right: 45px;
+    }
+  }
+
+  & .phone-block__item:not(:last-child) {
+    @include adpt ($tab-r) {
+      margin-right: 45px;
+    }
+  }
+
+  & .phone-block__text-popup {
+    display: none;
+  }
+}
