@@ -1,0 +1,10 @@
+.contacts {
+  padding: 65px 0;
+  background-color: $bg;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+
+  &__title {
+    margin-bottom: 20px;
+  }
+}

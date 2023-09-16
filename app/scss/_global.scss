@@ -173,6 +173,16 @@ body {
     }
   }
 
+  &_3 {
+    background-color: $telegram;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 7px 20px;
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+    }
+  }
+
   &._wa {
     display: flex;
     justify-content: center;
@@ -220,11 +230,12 @@ body {
 .heart {
   display: block;
 
-  &._active{
+  &._active {
     & svg path {
       fill: $red;
     }
   }
+
   & svg path {
     transition: fill 0.3s;
   }
