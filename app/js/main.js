@@ -119,17 +119,17 @@ $(function () {
   let headerFix = $('#header-fix')
   $(window).scroll(function (event) {
     let scroll = $(window).scrollTop();
-    if (scroll>400){
+    if (scroll > 400) {
       headerFix.addClass('_open')
       headerFix.removeClass('_close')
     } else {
       headerFix.removeClass('_open')
       headerFix.addClass('_close')
-      if (wrapHeaderLeft.hasClass('_active')){
+      if (wrapHeaderLeft.hasClass('_active')) {
         openAboutEmail()
       }
     }
-});
+  });
   //header-fix
 
   //js-open-about-email
@@ -296,5 +296,67 @@ $(function () {
 
   //promo-info-slider
 
+  //js-slider-services
+  const servicesSlider = new Swiper('.js-slider-services', {
 
+    slidesPerView: 1,
+    spaceBetween: 20,
+
+    pagination: {
+      el: '.services__pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.services__arrow_next',
+      prevEl: '.services__arrow_prev',
+    },
+    breakpoints: {
+      577: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        grid: {
+          rows: 1,
+        },
+      },
+      769: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        grid: {
+          rows: 1,
+        },
+      },
+      1025: {
+        slidesPerView: 4,
+        spaceBetween: 0,
+        grid: {
+          rows: 2,
+        },
+      },
+    }
+  });
+
+  //js-slider-services
+
+  //js-recommendation-slider
+  const recommendationSlider = new Swiper('.js-recommendation-slider', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+      1025: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+    },
+    navigation: {
+      nextEl: '.recommendation__arrow_next',
+      prevEl: '.recommendation__arrow_prev',
+    },
+
+  });
+
+  //js-recommendation-slider
 });

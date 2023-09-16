@@ -1,3 +1,165 @@
-.services{
-  
+.services {
+  padding: 65px 0 95px;
+  background-color: $bg;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0 60px;
+    border-top: 1px solid $grey;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__slider {
+    padding: 10px 10px 40px;
+    margin: -10px -10px -40px;
+  }
+
+  &__slide-wrap {
+    height: auto;
+
+    @include adpt-mob (1025) {
+      padding-bottom: 30px;
+      padding-right: 30px;
+      width: initial !important;
+    }
+
+    &:nth-child(2n) {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(8) {
+      padding-right: 0;
+    }
+
+    &:nth-child(7) {
+      padding-right: 0;
+    }
+  }
+
+  &__slide {
+    border-radius: 4px;
+    background-color: $white;
+    border: 1px solid $grey;
+    padding: 30px;
+    position: relative;
+    height: 100%;
+    box-sizing: border-box;
+    transition: box-shadow 0.3s;
+
+    @include adpt ($bmob-r) {
+      padding: 30px 15px;
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.11);
+
+      & .services__slide-icon {
+        & linearGradient stop {
+          stop-color: $red;
+        }
+      }
+    }
+  }
+
+  &__slide-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    @include adpt ($tab-r) {
+      right: 15px;
+    }
+
+    & linearGradient stop {
+      transition: stop-color 0.3s;
+    }
+  }
+
+  &__slide-img {
+    aspect-ratio: 16/13;
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    max-width: 160px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__slide-title {
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    color: $headers;
+    line-height: 1.25;
+    margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__slide-text {
+    opacity: 0.8;
+  }
+
+  &__option {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    width: calc(100% - 20px);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & span {
+      margin: 0 !important;
+      width: 7px;
+      height: 7px;
+      border: 1px solid $red;
+      opacity: 1 !important;
+      box-shadow: 0px 0px 12px 2px rgba(51, 51, 51, 0.11);
+      background-color: $red;
+
+      &.swiper-pagination-bullet-active {
+        background-color: $white;
+      }
+
+      &:not(:last-child) {
+        margin-right: 10px !important;
+      }
+    }
+  }
+
+  & .swiper-wrapper {
+    width: 100% !important;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @include adpt ($tab-r) {
+      display: flex;
+      width: inherit !important;
+    }
+  }
 }
