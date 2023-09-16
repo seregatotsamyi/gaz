@@ -172,6 +172,18 @@ body {
       background-color: $red;
     }
   }
+
+  &._wa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $whatsapp;
+
+    & img {
+      margin-right: 7px;
+      pointer-events: none;
+    }
+  }
 }
 
 .categories-span {
