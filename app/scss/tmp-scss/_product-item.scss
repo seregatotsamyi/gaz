@@ -1,0 +1,282 @@
+.product-item {
+  position: relative;
+  z-index: 1;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0px 0px 12px 2px rgba(51, 51, 51, 0.11);
+    z-index: 2;
+
+    & .product-item__subbottom {
+      opacity: 1;
+      pointer-events: all;
+      box-shadow: 0px 9px 9px 0px rgba(51, 51, 51, 0.11);
+    }
+  }
+
+  &__wrap {
+    position: relative;
+    background-color: $white;
+    padding: 20px 20px 35px;
+    border: 1px solid $grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include adpt ($tab-r) {
+      padding: 20px 15px 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      border-radius: 3px !important;
+    }
+
+  }
+
+  &__top {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  &__add {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    max-width: calc(100% - 40px);
+    color: $white;
+    border-radius: 2px;
+    padding: 1px 10px;
+    line-height: 20px;
+
+    @include adpt ($bmob-r) {
+      left: 5px;
+      max-width: calc(100% - 10px);
+    }
+
+    &._orange {
+      background-color: $yellow;
+    }
+
+    &._red {
+      background-color: $red;
+    }
+
+    &._green {
+      background-color: $whatsapp;
+    }
+  }
+
+  &__img-wrap {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: auto;
+    margin-bottom: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__name {
+    font-style: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $headers;
+    margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__discr {
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    @include adpt ($bmob-r) {
+      flex: 1;
+    }
+  }
+
+  &__info-status {
+    margin-right: 10px;
+    padding-left: 9px;
+    position: relative;
+
+
+    &._green {
+      color: $whatsapp;
+
+      &::before {
+        background-color: $whatsapp;
+      }
+    }
+
+    &._red {
+      color: $red;
+
+      &::before {
+        background-color: $red;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      left: 0;
+    }
+  }
+
+  &__article {
+    opacity: 0.6;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-wrap {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  &__btn {
+    border: 1px solid $red;
+    color: $red;
+    background-color: $white;
+    transition: background-color 0.3s;
+
+    @include adpt ($tab-r) {
+      padding: 10px 12px;
+    }
+
+    @include adpt ($bmob-r) {
+      flex: 1;
+    }
+
+    &:hover {
+      background-color: $red;
+      color: $white;
+    }
+  }
+
+  &__price {
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    color: $headers;
+
+    @include adpt ($tab-r) {
+      font-size: 14px;
+    }
+
+    @include adpt ($stab-r) {
+      font-size: 16px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__sale {
+    display: flex;
+    align-items: center;
+  }
+
+  &__price-old {
+    text-decoration: line-through;
+    opacity: 0.7;
+    margin-right: 5px;
+
+    @include adpt ($tab-r) {
+      font-size: 12px;
+    }
+
+    @include adpt ($stab-r) {
+      font-size: 14px;
+    }
+  }
+
+  &__price-sale-count {
+    font-size: 9px;
+    padding: 0 4px;
+    line-height: 18px;
+    border-radius: 3px;
+    background-color: $yellow;
+    color: $white;
+  }
+
+  &__subbottom {
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: calc(100% + 2px);
+    background-color: $white;
+    padding: 15px 20px 35px;
+    border: 1px solid $grey;
+    border-top: none;
+    z-index: 10;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, box-shadow 0.3s;
+
+    @include adpt ($desm-r) {
+      padding-top: 5px;
+    }
+
+    @include adpt ($bmob-r) {
+      border-radius: 0 0 3px 3px !important;
+      padding-bottom: 20px;
+    }
+
+
+    & .product-item__btn {
+      padding: 10px 2px;
+    }
+  }
+
+  &__quick {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    color: $red;
+    text-decoration: underline;
+  }
+
+  &__sub-btns {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 17px;
+    grid-gap: 10px;
+  }
+}
