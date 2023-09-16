@@ -1,0 +1,173 @@
+.reviews {
+  padding: 65px 0;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    margin-top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+    @include adpt ($bmob-r) {
+      width: 100%;
+      font-weight: 300;
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+
+  &__slider-wrap {
+    position: relative;
+  }
+
+  &__slider {
+    margin: 0 15px;
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
+    &_next {
+      left: auto;
+      right: 0;
+      transform: translateY(-50%) scale(-1);
+    }
+  }
+
+  &__slide-wrap {
+    height: auto;
+    box-sizing: border-box;
+
+    &.swiper-slide-active {
+
+      border-right: 1px solid rgba(102, 102, 102, 0.3);
+
+      @include adpt ($stab-r) {
+        border: none;
+      }
+
+      & .reviews__slide {
+        border-radius: 6px 0px 0px 6px;
+
+        @include adpt ($stab-r) {
+          border-radius: 6px;
+        }
+      }
+    }
+
+    &.swiper-slide-next {
+      & .reviews__slide {
+        border-radius: 0 6px 6px 0;
+
+        @include adpt ($stab-r) {
+          border-radius: 6px;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    padding: 40px 60px;
+    background-color: $lightGrey;
+    height: 100%;
+
+    @include adpt ($tab-r) {
+      padding: 30px 35px;
+    }
+
+    @include adpt ($stab-r) {
+      border-radius: 6px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 23px;
+  }
+
+  &__info {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  &__img-wrap {
+    flex: 1;
+    max-width: 80px;
+
+    @include adpt ($tab-r) {
+      max-width: 60px;
+    }
+
+    @include adpt ($bmob-r) {
+      max-width: 50px;
+    }
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    @include adpt ($tab-r) {
+      width: 60px;
+      height: 60px;
+    }
+
+    @include adpt ($bmob-r) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__from {
+    margin-bottom: 8px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__author {
+    font-size: 16px;
+    color: $headers;
+    font-family: $secondFont;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 8px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__stars {
+    object-fit: contain;
+    width: 85px;
+    height: 17px;
+  }
+
+  &__text {
+    max-width: 430px;
+  }
+
+
+}

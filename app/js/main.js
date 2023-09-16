@@ -364,6 +364,26 @@ $(function () {
 		e.preventDefault()
 		$(this).parents('.questions__item').toggleClass("_active").find('.questions__text').slideToggle();
 	})
-
   //spoiler
+
+  //js-reviews-slider
+  const reviewsSlider = new Swiper('.js-reviews-slider', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    autoHeight: true,
+    breakpoints: {
+      769: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        autoHeight: false,
+      },
+    },
+    navigation: {
+      nextEl: '.reviews__arrow_next',
+      prevEl: '.reviews__arrow_prev',
+    },
+
+  });
+  
+  //js-reviews-slider
 });
