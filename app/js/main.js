@@ -365,15 +365,25 @@ $(function () {
 
 
 
-  
+
 
   //js-toggle-fly-basket
   const btnsFlyTogle = $('.js-toggle-fly-basket')
   const basketFly = $('#basket-fly')
   $(document).on('click', '.js-toggle-fly-basket', function (e) {
     basketFly.toggleClass('_open')
+    body.toggleClass('_fixed')
   })
+  //js-toggle-fly-basket
 
+  //js-toggle-fly-catalog
+  const btnsFlyToggleCatalog = $('.js-catalog-link')
+  const basketFlyCatalog = $('#catalog-fly')
+  $(document).on('click', '.js-catalog-link', function (e) {
+    e.preventDefault()
+    basketFlyCatalog.toggleClass('_open')
+    body.toggleClass('_fixed')
+  })
   //js-toggle-fly-basket
 
   //click outside
@@ -402,6 +412,17 @@ $(function () {
         basketFly.has(e.target).length === 0 && !btnsFlyTogle.is(e.target) &&
         btnsFlyTogle.has(e.target).length === 0) {
         basketFly.removeClass('_open')
+        body.removeClass('_fixed')
+      }
+    }
+
+    const CatalogFly = $('#catalog-fly')
+    if (CatalogFly.hasClass('_open')) {
+      if (!CatalogFly.is(e.target) &&
+        CatalogFly.has(e.target).length === 0 && !btnsFlyToggleCatalog.is(e.target) &&
+        btnsFlyToggleCatalog.has(e.target).length === 0) {
+        CatalogFly.removeClass('_open')
+        body.removeClass('_fixed')
       }
     }
 

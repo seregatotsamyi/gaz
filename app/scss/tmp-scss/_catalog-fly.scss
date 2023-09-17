@@ -1,0 +1,94 @@
+.catalog-fly {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 10000;
+  max-width: 720px;
+  width: 100%;
+  background-color: $white;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 4px 0px 12px 2px rgba(51, 51, 51, 0.11);
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+
+  @include adpt ($desm-r) {
+    max-width: 600px;
+  }
+
+  @include adpt ($stab-r) {
+    display: none;
+  }
+
+  &._open {
+    transform: translateX(0);
+  }
+
+  &__list {
+    width: 74px;
+    position: absolute;
+    right: -73px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $white;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 4px 0px 12px 2px rgba(51, 51, 51, 0.11);
+  }
+
+  &__item {
+    position: relative;
+
+    &:first-child {
+      & .basket-fly__link {
+        height: 61px;
+        padding-top: 10px;
+      }
+    }
+
+    &:last-child {
+      & .basket-fly__link {
+        padding-bottom: 10px;
+        height: 61px;
+      }
+    }
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 54px;
+        transform: translateX(-50%);
+        background-color: $grey;
+        height: 1px;
+      }
+    }
+  }
+
+  &__link {
+    height: 50px;
+    width: 100%;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__close-img {
+    object-fit: contain;
+  }
+}
