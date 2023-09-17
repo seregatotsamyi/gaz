@@ -378,11 +378,22 @@ $(function () {
 
   //js-toggle-fly-catalog
   const btnsFlyToggleCatalog = $('.js-catalog-link')
+  const btnFlyCatalogClose = $('.js-catalog-close')
   const basketFlyCatalog = $('#catalog-fly')
   $(document).on('click', '.js-catalog-link', function (e) {
     e.preventDefault()
-    basketFlyCatalog.toggleClass('_open')
-    body.toggleClass('_fixed')
+    $('.js-catalog-link').removeClass('_active');
+    $(this).addClass('_active');
+
+    $('.catalog-fly__box').removeClass('_active');
+    $($(this).attr('href')).addClass('_active');
+    basketFlyCatalog.addClass('_open')
+    body.addClass('_fixed')
+  })
+  $(document).on('click', '.js-catalog-close', function (e) {
+    basketFlyCatalog.removeClass('_open')
+    body.removeClass('_fixed')
+    $('.js-catalog-link').removeClass('_active');
   })
   //js-toggle-fly-basket
 
@@ -423,6 +434,7 @@ $(function () {
         btnsFlyToggleCatalog.has(e.target).length === 0) {
         CatalogFly.removeClass('_open')
         body.removeClass('_fixed')
+        $('.js-catalog-link').removeClass('_active');
       }
     }
 
