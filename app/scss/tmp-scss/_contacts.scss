@@ -4,7 +4,263 @@
   border-bottom: 1px solid $grey;
   border-top: 1px solid $grey;
 
+  @include adpt ($bmob-r) {
+    padding: 30px 0 60px;
+  }
+
   &__title {
     margin-bottom: 20px;
+
+    @include adpt ($stab-r) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 0;
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 55px;
+    }
+  }
+
+  &__right {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 170px;
+
+    @include adpt ($stab-r) {
+      padding-left: 0;
+      max-width: 420px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+
+  &__right-img {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: contain;
+  }
+
+  &__arrow {
+    display: none;
+
+    @include adpt ($stab-r) {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+
+    &_prev {
+      top: -15px;
+      transform: rotate(90deg) translateY(50%);
+    }
+
+    &_next {
+      bottom: -15px;
+      transform: rotate(-90deg) translateY(-50%);
+    }
+  }
+
+  &__list-wrap-wrap {
+    position: relative;
+  }
+
+  &__list-wrap {
+    position: relative;
+    overflow-y: auto;
+    min-width: 0;
+    min-height: 0;
+    border-radius: 4px;
+    max-height: 688px;
+    scrollbar-width: thin;
+    scrollbar-color: $text transparent;
+    padding-right: 20px;
+
+
+    @include adpt ($tab-r) {
+      max-height: 431px;
+    }
+
+    @include adpt ($stab-r) {
+      padding-right: 5px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+
+      @include adpt ($stab-r) {
+        width: 5px;
+      }
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(102, 102, 102, 0.3);
+      border-radius: 30px;
+      border: none;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  }
+
+  &__list {
+    border-radius: 4px;
+    background-color: $white;
+    border: 1px solid #E9E6E7;
+
+    @include adpt ($stab-r) {
+      padding: 5px 0;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+
+    &._active {
+      & .contacts__slide-arw {
+        transform: rotate(90deg) translateX(20px);
+
+        & path {
+          fill: $red;
+        }
+      }
+
+      & .contacts__top {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  &__slide-wrap {
+    height: fit-content !important;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #E9E6E7;
+    }
+  }
+
+  &__slide-arw {
+    position: absolute;
+    width: 24px;
+    height: 8px;
+    right: 40px;
+    top: 39px;
+    transition: transform 0.3s;
+
+    @include adpt ($tab-r) {
+      right: 20px;
+    }
+
+    & path {
+      transition: fill 0.3s;
+    }
+  }
+
+  &__top {
+    padding: 17px 40px;
+    padding-right: 60px;
+    text-align: left;
+    height: 100%;
+    width: auto;
+    transition: all 0.3s;
+
+    @include adpt ($tab-r) {
+      padding: 17px 20px;
+      padding-right: 40px;
+    }
+  }
+
+  &__subtitle {
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    color: $headers;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  &__tel {
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__bottom-wrap {
+    display: none;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-gap: 20px;
+    padding: 0 40px 17px;
+
+    @include adpt ($tab-r) {
+      padding: 0 20px 17px;
+    }
+  }
+
+  &__item-numbers {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__mail {
+    & a {
+      text-decoration: underline;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__discr {
+    & p:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__mapping {
+    color: $red;
+    text-decoration: underline;
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  & .swiper-wrapper {
+    width: 100%;
+  }
+
+  &__map-map {
+    width: 100%;
+    height: 556px;
+
+    @include adpt ($tab-r) {
+      height: 400px;
+    }
+
+    @include adpt ($bmob-r) {
+      height: 288px;
+    }
   }
 }

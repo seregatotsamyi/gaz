@@ -182,31 +182,6 @@ $(function () {
   //select2
 
 
-  //click outside
-
-  $(document).mouseup(function (e) {
-    if (!openAboutEmailBtn.is(e.target) &&
-      openAboutEmailBtn.has(e.target).length === 0 && !phoneBlockDropdown.is(e.target) &&
-      phoneBlockDropdown.has(e.target).length === 0) {
-      if (phoneBlockDropdown.hasClass('_active')) {
-        openAboutEmail()
-      }
-    }
-
-    const searchWrap = $('.search__wrap')
-    if (!searchWrap.is(e.target) &&
-      searchWrap.has(e.target).length === 0 && !searchToggleBtns.is(e.target) &&
-      searchToggleBtns.has(e.target).length === 0) {
-      if (searchBlock.hasClass('_open')) {
-        searchToggle()
-      }
-    }
-
-
-  });
-
-  //click outside
-
   //mob-menu
   const mobMenu = $('#mobMenu')
   const toggleMobMenuBtns = $('.js-toggle-mob-menu')
@@ -360,10 +335,10 @@ $(function () {
   //js-recommendation-slider
 
   //spoiler
-  $(document).on('click','.questions__btn',function (e) {
-		e.preventDefault()
-		$(this).parents('.questions__item').toggleClass("_active").find('.questions__text').slideToggle();
-	})
+  $(document).on('click', '.questions__btn', function (e) {
+    e.preventDefault()
+    $(this).parents('.questions__item').toggleClass("_active").find('.questions__text').slideToggle();
+  })
   //spoiler
 
   //js-reviews-slider
@@ -384,6 +359,135 @@ $(function () {
     },
 
   });
-  
+
   //js-reviews-slider
+
+
+  //js-contacts-map
+
+
+
+
+  let myMap = new ymaps.Map("map", {
+    center: [55.698112, 37.708410],
+    zoom: 10
+  });
+
+  let createMark = (coordinates, iconCaption, balloonContent) => {
+    myMap.geoObjects.add(new ymaps.Placemark(coordinates, {
+      iconCaption: iconCaption,
+      balloonContent: balloonContent
+    }, {
+      preset: 'islands#yellowFuelStationIcon'
+    }))
+  }
+
+  let zoomMark = (coordinates) => {
+    myMap.setCenter(coordinates, 14, {
+      checkZoomRange: true
+    });
+  }
+
+  $('.js-contact-btn').each((i, e) => {
+    const stringOfCoordinates = $(e).attr('data-coordinates')
+    const iconCaption = $(e).attr('data-text')
+    const balloonContent = $(e).attr('data-bullun')
+    const coordinates = JSON.parse(stringOfCoordinates);
+    createMark(coordinates, iconCaption, balloonContent)
+  })
+  //js-contacts-map
+
+  //spoiler-contact
+  $(document).on('click', '.js-contact-btn', function (e) {
+    e.preventDefault()
+
+    if ($(this).hasClass('_active')) {
+      $(this).removeClass("_active")
+      $(this).parents('.contacts__slide').toggleClass("_active").find('.contacts__bottom-wrap').slideToggle();
+      const coordinates = JSON.parse($(this).attr('data-coordinates'))
+      zoomMark(coordinates)
+
+    } else {
+      $('.js-contact-btn').removeClass('_active')
+      $(this).addClass("_active")
+      $('.js-contact-btn').parents('.contacts__slide').removeClass("_active").find('.contacts__bottom-wrap').slideUp();
+      $(this).parents('.contacts__slide').addClass("_active").find('.contacts__bottom-wrap').slideDown();
+      const coordinates = JSON.parse($(this).attr('data-coordinates'))
+      zoomMark(coordinates)
+    }
+  })
+  //spoiler-contact
+
+  //contact-list
+
+
+
+  const contactListWrap = $('.contacts__list-wrap')
+  const contactList = $('.contacts__list')
+  let scrollPos = contactList.position().top;
+  contactListWrap.on("scroll", function () {
+    scrollPos = contactList.position().top;
+  });
+
+  $(document).on('click', '.contacts__arrow_prev', function (e) {
+    scrollPos = contactList.position().top;
+    scrollPos = scrollPos + 100
+    contactListWrap.animate({
+      scrollTop: ((-1) * scrollPos)
+    });
+  })
+  $(document).on('click', '.contacts__arrow_next', function (e) {
+    scrollPos = contactList.position().top;
+    scrollPos = scrollPos - 100
+    contactListWrap.animate({
+      scrollTop: ((-1) * scrollPos)
+    });
+  })
+  //contact-list
+
+  //js-toggle-fly-basket
+  const btnsFlyTogle = $('.js-toggle-fly-basket')
+  const basketFly = $('#basket-fly')
+  $(document).on('click', '.js-toggle-fly-basket', function (e) {
+    basketFly.toggleClass('_open')
+  })
+
+  //js-toggle-fly-basket
+
+  //click outside
+
+  $(document).mouseup(function (e) {
+    if (!openAboutEmailBtn.is(e.target) &&
+      openAboutEmailBtn.has(e.target).length === 0 && !phoneBlockDropdown.is(e.target) &&
+      phoneBlockDropdown.has(e.target).length === 0) {
+      if (phoneBlockDropdown.hasClass('_active')) {
+        openAboutEmail()
+      }
+    }
+
+    const searchWrap = $('.search__wrap')
+    if (!searchWrap.is(e.target) &&
+      searchWrap.has(e.target).length === 0 && !searchToggleBtns.is(e.target) &&
+      searchToggleBtns.has(e.target).length === 0) {
+      if (searchBlock.hasClass('_open')) {
+        searchToggle()
+      }
+    }
+
+    const basketFly2 = $('#basket-fly')
+    if (basketFly2.hasClass('_open')) {
+      console.log(1)
+      if (!basketFly.is(e.target) &&
+        basketFly.has(e.target).length === 0 && !btnsFlyTogle.is(e.target) &&
+        btnsFlyTogle.has(e.target).length === 0) {
+        basketFly.removeClass('_open')
+      }
+    }
+
+
+
+  });
+
+  //click outside
+
 });

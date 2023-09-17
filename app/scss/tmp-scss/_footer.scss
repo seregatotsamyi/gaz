@@ -16,6 +16,10 @@
   &__copyright {
     padding: 8px 0;
     background-color: $lightGrey;
+
+    @include adpt ($stab-r) {
+      padding-bottom: 70px;
+    }
   }
 
   &__copyright-text {
