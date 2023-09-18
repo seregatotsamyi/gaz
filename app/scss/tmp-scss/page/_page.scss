@@ -13,6 +13,10 @@
     grid-template-columns: 1fr;
   }
 
+  &._about {
+    grid-gap: 50px;
+  }
+
   &__sidebar {
     @include adpt ($stab-r) {
       display: none;
