@@ -397,6 +397,27 @@ $(function () {
   })
   //js-toggle-fly-basket
 
+  //sidebbar
+  $(document).on('click', '.js-sidebar-link', function (e) {
+    e.preventDefault()
+    if ($(this).hasClass('_open')) {
+      $(this).removeClass('_open')
+      $(this).parents('.sidebar__item').find('.sidebar__sublist').slideUp();
+    } else {
+      $('.js-sidebar-link').removeClass('_open')
+      $('.sidebar__sublist').slideUp();
+      $(this).addClass('_open')
+      $(this).parents('.sidebar__item').find('.sidebar__sublist').slideDown();
+    }
+  })
+  $('._js-open').addClass('_open')
+  $('._js-open').parents('.sidebar__item').find('.sidebar__sublist').slideDown();
+
+
+
+  //sidebbar
+
+
   //click outside
 
   $(document).mouseup(function (e) {
@@ -441,5 +462,7 @@ $(function () {
   });
 
   //click outside
+
+
 
 });

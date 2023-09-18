@@ -6,6 +6,10 @@
     padding: 30px 0;
   }
 
+  &._white {
+    background-color: $white;
+  }
+
   &__title {
     margin-bottom: 20px;
 

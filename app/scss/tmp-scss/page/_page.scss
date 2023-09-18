@@ -1,0 +1,21 @@
+.page {
+
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  grid-gap: 10px;
+  position: relative;
+
+  @include adpt ($tab-r) {
+    grid-template-columns: 1fr 280px;
+  }
+
+  @include adpt ($stab-r) {
+    grid-template-columns: 1fr;
+  }
+
+  &__sidebar {
+    @include adpt ($stab-r) {
+      display: none;
+    }
+  }
+}
