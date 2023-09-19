@@ -333,6 +333,15 @@ $(function () {
     },
 
   });
+  const recommendationSliderSidebar = new Swiper('.js-recommendation-slider-sidebar', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: '.recommendation__arrow_next',
+      prevEl: '.recommendation__arrow_prev',
+    },
+
+  });
   //js-recommendation-slider
 
   //spoiler

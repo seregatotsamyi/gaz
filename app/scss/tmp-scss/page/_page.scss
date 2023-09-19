@@ -17,9 +17,22 @@
     grid-gap: 50px;
   }
 
+  &__left {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
   &__sidebar {
     @include adpt ($stab-r) {
       display: none;
+    }
+
+  }
+
+  &__sidebar-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
     }
   }
 }

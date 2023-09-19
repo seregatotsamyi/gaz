@@ -114,11 +114,38 @@
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+
+    &._open {
+      & .sidebar__sublink {
+
+        font-weight: 700;
+        color: $headers;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
   }
 
   &__sublink {
+    position: relative;
+
     &:hover {
       color: $red;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -19px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $yellow;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
   }
 }
