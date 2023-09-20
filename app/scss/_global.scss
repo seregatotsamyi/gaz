@@ -184,6 +184,11 @@ body {
     }
   }
 
+  &_4 {
+    background-color: $yellow;
+    color: $white;
+  }
+
   &._wa {
     display: flex;
     justify-content: center;
