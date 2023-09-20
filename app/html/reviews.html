@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaz - reviews</title>
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="libs/select2.min.css">
+  <link rel="stylesheet" href="libs/slinky.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/page.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=9f98fc9d-2086-4987-b97c-2b62f03b37c9&lang=ru_RU"
+    type="text/javascript">
+    </script>
+</head>
+
+<body class="body" id="body">
+
+  @include('components/_header.html')
+  @include('components/_header-fix.html')
+  @include('components/_search.html')
+  @include('components/_tiles.html')
+
+
+  <main class="main">
+
+    <section class="page-top" style="background-image: url('images/reviews-bg.jpg');">
+      <div class="container">
+        <div class="page-top__inner">
+          <div class="page-top__title big-title">
+            Отзывы
+          </div>
+          <div class="page-top__text text">
+            Мы лидеры по поставкам технического газа и газового оборудования в Москве и Московской области
+          </div>
+          <div class="page-top__btns">
+            <a class="page-top__btn btn button popup--link" href="#calculation">
+              Заявка на рассчёт
+            </a>
+            <a class="page-top__btn btn btn_2 button popup--link" href="#cons">
+              Консультация
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="breadcrumbs _bg">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span>
+              Отзывы
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-title _bg">
+      <div class="container">
+        <div class="about-title__inner">
+          <div class="about-title__text title">
+            Отзывы о компании ГазЗаЧас
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="question-page reviews-page">
+      <div class="container">
+        <div class="page _about">
+          <div class="page__left">
+           
+            <div class="pagination question-page__pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item _prev">
+                  <a href="#">
+                    
+                  </a>
+                </li>
+                <li class="pagination__item _active">
+                  <a href="#">
+                    1
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">
+                    2
+                  </a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">
+                    3
+                  </a>
+                </li>
+                <li class="pagination__item _next">
+                  <a href="#">
+
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="page__sidebar">
+            <div class="sidebar page__sidebar-item">
+              <ul class="sidebar__list">
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link " href="#">
+                      О компании
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <button class="sidebar__link js-sidebar-link" type="button">
+                      Услуги
+                    </button>
+                  </div>
+                  <ul class="sidebar__sublist">
+                    <li class="sidebar__subitem ">
+                      <a class="sidebar__sublink" href="#">
+                        Обмен баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Продажа баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Аренда баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка газификаторов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Производство не типовых изделий
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка сосудов Дьюара
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка газгольдера
+                      </a>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Доставка
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Оплата
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Гарантия и возврат
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item ">
+                  <div class="sidebar__top ">
+                    <a class="sidebar__link " href="#">
+                      Вопросы и ответы
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link _open" href="#">
+                      Отзывы
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Вакансии
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Контакты
+                    </a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="prcatalog">
+
+      <div class="prcatalog__inner">
+        <div class="prcatalog__title">
+          Более 500 предприятиям ежемесячно поставляем технический газ и баллоны
+        </div>
+        <div class="prcatalog__content">
+          <div class="prcatalog__text">
+            Принимаем заказы от юридических и физических лиц
+          </div>
+          <a class="prcatalog__btn btn button" href="#">
+            Каталог газов
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    @include('components/_services.html')
+
+
+    <div class="order-payment _2">
+      <div class="order-payment__decor _1">
+
+      </div>
+      <div class="order-payment__decor _2">
+
+      </div>
+      <div class="container">
+        <div class="order-payment__inner">
+          <div class="order-payment__text">
+            Следите за нами в телеграм:
+          </div>
+          <div class="order-payment__btns">
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Наш канал
+            </a>
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Бот-помощник
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  @include('components/_footer.html')
+
+  <script>
+    window.addEventListener('load', function () {
+      let myMap;
+      ymaps.ready(function () {
+        myMap = new ymaps.Map("map", {
+          center: [55.698112, 37.708410],
+          zoom: 10
+        });
+        let createMark = (coordinates, iconCaption, balloonContent) => {
+          myMap.geoObjects.add(new ymaps.Placemark(coordinates, {
+            iconCaption: iconCaption,
+            balloonContent: balloonContent
+          }, {
+            preset: 'islands#yellowFuelStationIcon'
+          }))
+        }
+
+        let zoomMark = (coordinates) => {
+          myMap.setCenter(coordinates, 14, {
+            checkZoomRange: true
+          });
+        }
+
+        $('.js-contact-btn').each((i, e) => {
+          const stringOfCoordinates = $(e).attr('data-coordinates')
+          const iconCaption = $(e).attr('data-text')
+          const balloonContent = $(e).attr('data-bullun')
+          const coordinates = JSON.parse(stringOfCoordinates);
+          createMark(coordinates, iconCaption, balloonContent)
+        })
+        //spoiler-contact
+        $(document).on('click', '.js-contact-btn', function (e) {
+          e.preventDefault()
+
+          if ($(this).hasClass('_active')) {
+            $(this).removeClass("_active")
+            $(this).parents('.contacts__slide').toggleClass("_active").find('.contacts__bottom-wrap').slideToggle();
+            const coordinates = JSON.parse($(this).attr('data-coordinates'))
+            zoomMark(coordinates)
+
+          } else {
+            $('.js-contact-btn').removeClass('_active')
+            $(this).addClass("_active")
+            $('.js-contact-btn').parents('.contacts__slide').removeClass("_active").find('.contacts__bottom-wrap').slideUp();
+            $(this).parents('.contacts__slide').addClass("_active").find('.contacts__bottom-wrap').slideDown();
+            const coordinates = JSON.parse($(this).attr('data-coordinates'))
+            zoomMark(coordinates)
+          }
+        })
+        //spoiler-contact
+
+        //contact-list
+
+        const contactListWrap = $('.contacts__list-wrap')
+        const contactList = $('.contacts__list')
+        let scrollPos = contactList.position().top;
+        contactListWrap.on("scroll", function () {
+          scrollPos = contactList.position().top;
+        });
+
+        $(document).on('click', '.contacts__arrow_prev', function (e) {
+          scrollPos = contactList.position().top;
+          scrollPos = scrollPos + 100
+          contactListWrap.animate({
+            scrollTop: ((-1) * scrollPos)
+          });
+        })
+        $(document).on('click', '.contacts__arrow_next', function (e) {
+          scrollPos = contactList.position().top;
+          scrollPos = scrollPos - 100
+          contactListWrap.animate({
+            scrollTop: ((-1) * scrollPos)
+          });
+        })
+        //contact-list
+
+      })
+
+
+
+    })
+  </script>
+
+  @include('components/_popup.html')
+  @include('components/_popup-cons.html')
+  @include('components/_popup-calculation.html')
+
+  @include('components/_footer-scripts.html')
