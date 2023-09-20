@@ -421,11 +421,15 @@ $(function () {
   })
   $('._js-open').addClass('_open')
   $('._js-open').parents('.sidebar__item').find('.sidebar__sublist').slideDown();
-
-
-
   //sidebbar
 
+  //js-vacancy
+  $(document).on('click', '.js-vacancy', function (e) {
+    e.preventDefault()
+    $(this).toggleClass('_open')
+    $(this).parents('.vacancy__list-item').toggleClass("_open").find('.vacancy__subitem-block').slideToggle();
+  })
+  //js-vacancy
 
   //click outside
 
