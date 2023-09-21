@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaz - basket</title>
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="libs/select2.min.css">
+  <link rel="stylesheet" href="libs/slinky.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/page.min.css">
+
+</head>
+
+<body class="body" id="body">
+
+  @include('components/_header.html')
+  @include('components/_header-fix.html')
+  @include('components/_search.html')
+  @include('components/_tiles.html')
+
+
+  <main class="main">
+
+
+    <div class="breadcrumbs _bg">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span>
+              Корзина
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-title _bg">
+      <div class="container">
+        <div class="about-title__inner">
+          <div class="about-title__text title">
+            Корзина
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="basket">
+      <div class="container">
+        <button class="basket__reset" type="button">
+          Очистить корзину
+        </button>
+        <div class="page basket__page">
+          <div class="page__left">
+
+          </div>
+          <div class="basket__sidebar">
+            <div class="basket__box">
+              <div class="basket__listing">
+                <span>3 товара на сумму</span>
+                <span class="basket__box-b">
+                  30 000 Р
+                  
+                </span>
+              </div>
+              <div class="basket__summa">
+                <span class="basket__box-b">
+                  Итого:
+                </span>
+                <span class="basket__box-b basket__box-summa">
+                  30 000 Р
+                </span>
+              </div>
+              <a class="basket__btn btn button" href="#">
+                Оформить заказ
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="order-payment _2">
+      <div class="order-payment__decor _1">
+
+      </div>
+      <div class="order-payment__decor _2">
+
+      </div>
+      <div class="container">
+        <div class="order-payment__inner">
+          <div class="order-payment__text">
+            Следите за нами в телеграм:
+          </div>
+          <div class="order-payment__btns">
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Наш канал
+            </a>
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Бот-помощник
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  @include('components/_footer.html')
+
+
+
+  @include('components/_popup.html')
+  @include('components/_popup-cons.html')
+  @include('components/_popup-vacancy.html')
+  @include('components/_popup-calculation.html')
+
+  @include('components/_footer-scripts.html')
