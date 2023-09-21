@@ -3,12 +3,25 @@
 
   &__title {
     margin-bottom: 20px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+
+    &:not(:first-child) {
+      margin-top: 20px;
+
+      @include adpt ($bmob-r) {
+        margin-top: 10px;
+      }
+    }
   }
 
   &__city-wrap {
     padding: 30px 0;
     border-bottom: 1px solid $grey;
     border-top: 1px solid $grey;
+
     @include adpt ($bmob-r) {
       padding: 20px 0;
     }
@@ -16,25 +29,29 @@
 
   &__wrap {
     padding: 50px 0 65px;
+
+    @include adpt ($bmob-r) {
+      padding: 30px 0;
+    }
   }
-  &__slider-inner{
+
+  &__slider-inner {
     position: relative;
-    @include adpt ($tab-r){
+
+    @include adpt ($tab-r) {
       margin: 0 -15px;
       padding: 0 16px;
     }
+
     @include adpt ($bmob-r) {
-      margin: 0 -10px;
-      padding: 0 11px;
+      margin: 0;
+      padding: 0 15px;
     }
   }
 
   &__slider {
     width: 100%;
     height: 100%;
-    @include adpt ($bmob-r) {
-      padding: 0 5px;
-    }
   }
 
   &__slide-wrap {
@@ -53,7 +70,7 @@
     height: auto;
     width: 100%;
     transition: border-color 0.3s, box-shadow 0.3s;
-    
+
 
     &:hover {
       border-color: $red;
@@ -80,6 +97,7 @@
     color: $headers;
     line-height: 1.25;
     margin-bottom: 3px;
+
     @include adpt ($bmob-r) {
       font-size: 18px;
       line-height: 1.5;
@@ -94,7 +112,8 @@
 
   &__arrow {
     display: none;
-    @include adpt ($tab-r){
+
+    @include adpt ($tab-r) {
       display: flex;
       position: absolute;
       top: 50%;
@@ -102,11 +121,160 @@
       left: 0;
       z-index: 10;
     }
-    &_next{
+
+    &_next {
       left: auto;
       right: 0;
       transform: translateY(-50%) rotate(180deg);
     }
+  }
+
+  &__box {
+    padding: 20px 20px 30px;
+    border-radius: 4px;
+    border: 1px solid $grey;
+    background-color: $white;
+
+    @include adpt ($bmob-r) {
+      padding: 30px 15px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__box-address {
+    margin-bottom: 30px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__box-inner {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include adpt ($tab-r) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 60px;
+
+      @include adpt ($tab-r) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__box-left {
+    flex: 1;
+    max-width: 497px;
+    margin-right: 20px;
+
+    @include adpt ($tab-r) {
+      margin-right: 0;
+      margin-bottom: 40px;
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__box-right {
+    max-width: 400px;
+    flex: 1;
+
+    @include adpt ($tab-r) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__box-link {
+    width: 100%;
+    display: block;
+  }
+
+  &__box-map {
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 12px 2px rgba(51, 51, 51, 0.11);
+
+    @include adpt ($tab-r) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__box-img-wrap {
+    margin-bottom: 20px;
+  }
+
+  &__box-img {
+    border-radius: 5px;
+    object-fit: cover;
+    aspect-ratio: 497/332;
+    width: 100%;
+    height: auto;
+  }
+
+  &__box-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__box-info {
+
+    &:not(:last-child) {
+      margin-right: 50px;
+
+      @include adpt ($bmob-r) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__box-info-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__box-info-grey {
+    font-size: 12px;
+    opacity: 0.5;
+    line-height: 1.66;
+    margin-bottom: 5px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__box-info-text {
+    @include adpt ($bmob-r) {
+      color: $headers;
+    }
+
+    & a {
+      display: block;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__box-map-inner {
+    width: 100%;
+    height: 360px;
   }
 }
 

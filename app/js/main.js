@@ -439,10 +439,13 @@ $(function () {
       fill: "row",
     },
     navigation: {
-      nextEl: '.reviews__arrow_next',
-      prevEl: '.reviews__arrow_prev',
+      nextEl: '.contact-page__arrow_next',
+      prevEl: '.contact-page__arrow_prev',
     },
     breakpoints: {
+      577: {
+        slidesPerView: 2,
+      },
       769: {
         slidesPerView: 4,
       },
@@ -452,7 +455,7 @@ $(function () {
     },
 
   });
-  
+
   //js-contact-page-slider
 
   //click outside

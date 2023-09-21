@@ -5001,17 +5001,17 @@
           const balloonContent = $(elem).attr('data-bullun')
           const coordinates = JSON.parse(stringOfCoordinates);
           let mapsId = "map-" + index
-
+         
           maps[index] = new ymaps.Map(mapsId, {
             center: coordinates,
             zoom: 14
           });
           maps[index].geoObjects.add(new ymaps.Placemark(coordinates, {
-            iconCaption: iconCaption,
-            balloonContent: balloonContent
-          }, {
-            preset: 'islands#yellowFuelStationIcon'
-          }))
+          iconCaption: iconCaption,
+          balloonContent: balloonContent
+        }, {
+          preset: 'islands#yellowFuelStationIcon'
+        }))
 
         })
       })

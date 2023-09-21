@@ -1,0 +1,65 @@
+.basket {
+  padding: 30px 0 65px;
+  background-color: $bg;
+  border-bottom: 1px solid $grey;
+
+  &__reset {
+    margin-bottom: 30px;
+    left: 100%;
+    transform: translateX(-100%);
+    position: relative;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__box {
+    border: 1px solid $grey;
+    background-color: $white;
+    padding: 30px;
+  }
+
+  &__listing {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $grey;
+    margin-bottom: 20px;
+
+    & span {
+      color: $headers;
+      font-size: 16px;
+    }
+  }
+
+  &__box-b {
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    color: $headers;
+    line-height: 1.25;
+  }
+
+  &__summa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  &__box-summa {
+    flex-wrap: nowrap;
+    color: $red;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__page {
+    grid-template-columns: 1fr 400px;
+    grid-gap: 50px;
+  }
+}
