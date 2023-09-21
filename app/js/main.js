@@ -431,6 +431,22 @@ $(function () {
   })
   //js-vacancy
 
+  //js-contact-page-slider
+  const contactPageSlider = new Swiper('.js-contact-page-slider', {
+    slidesPerView: 5,
+    grid: {
+      rows: 3,
+      fill: "row",
+    },
+    navigation: {
+      nextEl: '.reviews__arrow_next',
+      prevEl: '.reviews__arrow_prev',
+    },
+
+  });
+  
+  //js-contact-page-slider
+
   //click outside
 
   $(document).mouseup(function (e) {
