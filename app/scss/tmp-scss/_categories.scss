@@ -1,0 +1,183 @@
+.categories {
+  padding: 65px 0;
+  background-color: $bg;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &._white {
+    background-color: $white;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @include adpt ($tab-r) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+      border-radius: 0;
+      grid-gap: 10px;
+    }
+  }
+
+  &__item-wrap {
+    background-color: $lightGrey;
+    padding: 20px;
+    border: 1px solid $grey;
+    border-top: none;
+
+    @include adpt ($bmob-r) {
+      border: none;
+      border-radius: 3px;
+      padding: 26px 15px;
+    }
+
+    &:nth-child(3n) {
+      border-right: none;
+
+      @include adpt ($tab-r) {
+        border-right: 1px solid $grey;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      border-left: none;
+
+      @include adpt ($tab-r) {
+        border-left: 1px solid $grey;
+      }
+    }
+
+    &:nth-child(n+4) {
+      border-bottom: none;
+      border-top: 1px solid $grey;
+    }
+
+    &:nth-child(n+3) {
+      border-top: 1px solid $grey;
+
+      @include adpt ($bmob-r) {
+        border: none;
+      }
+    }
+
+    &:nth-child(2n) {
+      border-right: none;
+    }
+
+    &:nth-child(2n+1) {
+      border-left: none;
+    }
+
+  }
+
+
+  &__item-title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__item-title {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    font-family: $secondFont;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.11;
+    color: $headers;
+    margin-right: 15px;
+
+    @include adpt ($bmob-r) {
+      margin-right: 5px;
+    }
+  }
+
+  &__item-icon {
+    flex-shrink: 0;
+    margin-right: 16px;
+  }
+
+  &__decor-icon-wrap {
+    position: relative;
+    margin-right: -20px;
+  }
+
+  &__decor-icon {
+    flex: 1;
+    height: auto;
+    transform: scale(-1);
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    grid-gap: 40px;
+
+    @include adpt ($desm-r) {
+      grid-template-columns: 1fr 120px;
+      grid-gap: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr 105px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      background-color: $red;
+      border-radius: 50%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &__link {
+    line-height: 1.43;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__img {
+    width: 140px;
+    height: 187px;
+    aspect-ratio: 140/187;
+    object-fit: cover;
+
+    @include adpt ($desm-r) {
+      width: 120px;
+      height: auto;
+    }
+  }
+}

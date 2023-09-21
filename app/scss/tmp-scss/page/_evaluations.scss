@@ -1,0 +1,195 @@
+.evaluations {
+  padding: 65px 0;
+  background-color: $bg;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+
+  @include adpt ($bmob-r) {
+    padding: 20px 0 40px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px 40px;
+    margin-bottom: 80px;
+
+    @include adpt ($stab-r) {
+      margin-bottom: 60px;
+      grid-gap: 20px 30px;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__col {
+    max-width: 45px;
+    flex: 1;
+    margin-right: 30px;
+    flex-shrink: 0;
+
+    @include adpt ($stab-r) {
+      margin-right: 15px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 30px;
+    }
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__name {
+    font-size: 16px;
+    color: $headers;
+    font-family: $secondFont;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__stroke {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    height: 7px;
+    background-color: $grey;
+    margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      height: 5px;
+      margin-bottom: 7px;
+    }
+
+    & span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: $yellow;
+      border-radius: 10px;
+
+    }
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    @include adpt ($stab-r) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    flex: 1;
+    max-width: 460px;
+    padding: 15px;
+
+    @include adpt ($tab-r) {
+      max-width: 320px;
+    }
+
+    @include adpt ($stab-r) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__bottom-item {
+    &:not(:last-child) {
+      margin-right: 110px;
+
+      @include adpt ($tab-r) {
+        margin-right: 30px;
+
+      }
+
+      @include adpt ($bmob-r) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &__item-title {
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    color: $red;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 1px;
+    }
+  }
+
+  &__item-col {
+    font-size: 30px;
+
+    @include adpt ($tab-r) {
+      font-size: 26px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      @include adpt ($bmob-r) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__item-text {
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+    }
+  }
+}

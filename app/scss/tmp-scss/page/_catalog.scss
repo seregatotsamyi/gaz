@@ -1,0 +1,79 @@
+.catalog {
+  padding: 105px 0 65px;
+  background-color: $bg;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    &._first {
+      margin-bottom: 20px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    @include adpt ($tab-r) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+
+      @include adpt ($bmob-r) {
+        grid-gap: 20px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+
+
+  & .catalog-promo__btn {
+    @include adpt ($bmob-r) {
+      margin-top: 0;
+    }
+  }
+
+  & .categories-span {
+    display: none;
+
+    &._show {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    @include adpt ($stab-r) {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.catalog-title {
+  padding: 20px 0 30px;
+
+  @include adpt ($bmob-r) {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+}

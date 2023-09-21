@@ -1,6 +1,7 @@
 .footer {
   position: relative;
   margin-top: auto;
+  z-index: 1;
 
   &__top {
     padding: 50px 0 30px;
@@ -15,6 +16,10 @@
   &__copyright {
     padding: 8px 0;
     background-color: $lightGrey;
+
+    @include adpt ($stab-r) {
+      padding-bottom: 70px;
+    }
   }
 
   &__copyright-text {

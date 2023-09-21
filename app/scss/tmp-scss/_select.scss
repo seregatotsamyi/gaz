@@ -65,8 +65,14 @@
   }
 
   &.select2-container--default .select2-results>.select2-results__options {
-    padding-right: 10px;
+    padding-left: 10px;
     max-height: 187px;
+    direction: rtl;
+
+    &>* {
+      text-align: left;
+      direction: ltr;
+    }
 
     &::-webkit-scrollbar {
       width: 3px;

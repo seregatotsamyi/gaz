@@ -1,0 +1,134 @@
+.reviews-list {
+  padding: 65px 0;
+  background-color: $bg;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__item {
+    border: 1px solid #E9E6E7;
+    padding: 17px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+
+    @include adpt ($tab-r) {
+      padding: 15px 20px;
+    }
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+    }
+
+    @include adpt ($bmob-r) {
+      padding: 15px 10px;
+    }
+  }
+
+  &__left {
+    flex: 1;
+    margin-right: 30px;
+
+    @include adpt ($stab-r) {
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    max-width: 500px;
+    flex: 1;
+
+    @include adpt ($stab-r) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    flex: 1;
+    padding: 15px;
+
+    @include adpt ($bmob-r) {
+      padding: 5px 1px;
+      letter-spacing: 0.48px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 19px;
+
+      @include adpt ($bmob-r) {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    color: $headers;
+    line-height: 1.25;
+    margin-bottom: 11px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__address {
+    margin-bottom: 15px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+  }
+
+  &__rating {
+    margin-right: 25px;
+    color: $yellow;
+  }
+
+  &__inner {
+    direction: rtl;
+    max-height: 611px;
+    overflow-y: auto;
+    padding-left: 14px;
+
+    @include adpt ($tab-r) {
+      max-height: 354px;
+    }
+
+    @include adpt ($stab-r) {
+      direction: ltr;
+      padding-left: 0;
+      padding-right: 10px;
+    }
+
+    @include adpt ($bmob-r) {
+      max-height: 490px;
+      padding-right: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #D9D9D9;
+      border-radius: 30px;
+      border: none;
+    }
+  }
+
+  &__list {
+    direction: ltr;
+  }
+}

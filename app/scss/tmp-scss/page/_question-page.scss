@@ -1,0 +1,194 @@
+.question-page {
+  padding: 30px 0 70px;
+  background-color: $bg;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0 50px;
+  }
+
+  &__instr {
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+
+    @include adpt ($stab-r) {
+      grid-gap: 20px;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 130px;
+
+      @include adpt ($stab-r) {
+        margin-bottom: 100px;
+      }
+    }
+  }
+
+  &__form-item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+
+      @include adpt ($stab-r) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &_textarea {
+      margin-bottom: 5px !important;
+
+      & textarea {
+        min-height: 146px;
+        resize: vertical;
+      }
+
+    }
+  }
+
+  &__label {
+    display: block;
+    color: $headers;
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+
+    @include adpt ($big-r) {
+      font-size: 18px;
+    }
+  }
+
+  &__input {
+    outline: none;
+    padding: 17px 10px 16px;
+    font-size: 20px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.25;
+    border: 1px solid #E9E6E7;
+
+    @include adpt ($big-r) {
+      font-size: 18px;
+    }
+
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 15px;
+    font-family: $secondFont;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      font-family: $mainFont;
+      letter-spacing: 0.7px;
+      line-height: 1.42;
+      font-weight: 300;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $grey;
+    margin-right: 20px;
+    flex: 1;
+    max-width: 60px;
+    background-image: url('../images/categories/1.svg');
+    background-size: 30px 37px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  &__quest {
+    padding: 17px 30px;
+    font-size: 20px;
+    color: $headers;
+    flex: 1;
+    line-height: 1.25;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+
+
+
+    @include adpt ($big-r) {
+      font-size: 18px;
+    }
+
+    @include adpt ($stab-r) {
+      padding: 10px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+    }
+  }
+
+  &__sublist {
+    margin-top: 15px;
+    padding-left: 110px;
+
+    @include adpt ($stab-r) {
+      padding-left: 0;
+    }
+  }
+
+  &__subitem {
+    font-size: 16px;
+    line-height: 1.25;
+
+    @include adpt ($stab-r) {
+      font-size: 14px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+      line-height: 1.5;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @include adpt ($stab-r) {
+      margin-top: 50px;
+    }
+  }
+}

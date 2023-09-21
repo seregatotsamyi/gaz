@@ -1,0 +1,151 @@
+.sidebar {
+  //position: sticky;
+  top: 70px;
+
+  &__list {
+    border: 1px solid $grey;
+    background-color: $white;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey;
+    }
+
+    &._first {
+      padding: 20px;
+      font-family: $secondFont;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.25;
+      color: $headers;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 30px;
+        width: 9px;
+        height: 5px;
+        background-image: url('../images/icon/sidebar-title.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 20px 30px;
+    padding-right: 45px;
+    font-size: 16px;
+    display: block;
+    color: $headers;
+    width: 100%;
+    text-align-last: left;
+    line-height: 1.4;
+
+    @include adpt ($tab-r) {
+      padding: 20px;
+      padding-right: 35px;
+    }
+
+    &.js-sidebar-link {
+      &::after {
+        display: block;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+      width: 9px;
+      height: 5px;
+      background-image: url('../images/icon/sidebar.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: transform 0.3s;
+
+      @include adpt ($tab-r) {
+        right: 20px;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      border-radius: 2px;
+      width: 4px;
+      height: 23px;
+      background-color: $red;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 11px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &._open {
+      font-weight: 500;
+
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+      }
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+  }
+
+  &__sublist {
+    display: none;
+    padding: 0 30px 20px;
+  }
+
+  &__subitem {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &._open {
+      & .sidebar__sublink {
+
+        font-weight: 700;
+        color: $headers;
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__sublink {
+    position: relative;
+
+    &:hover {
+      color: $red;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -19px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $yellow;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}

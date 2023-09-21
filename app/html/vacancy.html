@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaz - vacancy</title>
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="libs/select2.min.css">
+  <link rel="stylesheet" href="libs/slinky.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/page.min.css">
+</head>
+
+<body class="body" id="body">
+
+  @include('components/_header.html')
+  @include('components/_header-fix.html')
+  @include('components/_search.html')
+  @include('components/_tiles.html')
+
+
+  <main class="main">
+
+    <section class="page-top" style="background-image: url('images/reviews-bg.jpg');">
+      <div class="container">
+        <div class="page-top__inner">
+          <div class="page-top__title big-title">
+            Вакансии
+          </div>
+          <div class="page-top__text text">
+            Мы лидеры по поставкам технического газа и газового оборудования в Москве и Московской области
+          </div>
+          <div class="page-top__btns">
+            <a class="page-top__btn btn button popup--link" href="#calculation">
+              Заявка на рассчёт
+            </a>
+            <a class="page-top__btn btn btn_2 button popup--link" href="#cons">
+              Консультация
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="breadcrumbs _bg">
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="breadcrumbs__item">
+            <span>
+              Вакансии
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-title _bg">
+      <div class="container">
+        <div class="about-title__inner">
+          <div class="about-title__text title">
+            Вакансии
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="vacancy">
+      <div class="container">
+        <div class="page _about">
+          <div class="page__left">
+            <div class="vacancy__top">
+              <div class="vacancy__top-top">
+                <div class="vacancy__btn-wrap">
+                  <a class="vacancy__btn btn button popup--link" href="#vacancy">
+                    Отправить резюме
+                  </a>
+                </div>
+                <div class="vacancy__top-content">
+                  <div class="vacancy__top-left">
+                    <div class="vacancy__item">
+                      <span class="vacancy__label">
+                        Контактное лицо
+                      </span>
+                      <div class="vacancy__label-text">
+                        Иванов Иван Иваныч
+                      </div>
+                    </div>
+                    <div class="vacancy__item">
+                      <span class="vacancy__label">
+                        E-mail
+                      </span>
+                      <div class="vacancy__label-text">
+                        no-replay@gmail.com
+                      </div>
+                    </div>
+                  </div>
+                  <div class="vacancy__top-right">
+                    <div class="vacancy__item">
+                      <span class="vacancy__label">
+                        Телефон
+                      </span>
+                      <div class="vacancy__label-text">
+                        8 495 660-54-68
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="vacancy__top-text">
+                Компания продолжает развиваться и расширяться. Поэтому мы всегда рады видеть в своей команде новых
+                инициативных сотрудников, готовых помогать с решением непростых задач и реализацией масштабных проектов.
+              </div>
+            </div>
+            <div class="vacancy__title title">
+              Офис
+            </div>
+            <ul class="vacancy__list">
+              <li class="vacancy__list-item">
+                <button class="vacancy__list-btn js-vacancy" type="button">
+                  <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.7551 1V26M26 13.9808H1" stroke="#666666" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <div class="vacancy__list-item-top">
+                  <div class="vacancy__info">
+                    <div class="vacancy__name">
+                      Логист
+                    </div>
+                    <div class="vacancy__price">
+                      35 000 р
+                    </div>
+                  </div>
+                  <div class="vacancy__experience">
+                    Опыт работы: 1-3 года — Постоянная
+                  </div>
+                  <div class="vacancy__discr text">
+                    Логист в нашей компании — важнейшее звено в цепи между продавцом и клиентом. Наши логисты занимаются
+                    организацией отгрузок продукции и следят за их реализацией.
+                  </div>
+                </div>
+                <div class="vacancy__subitem-block">
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Обязанности
+                    </li>
+                    <li class="vacancy__subitem">
+                      Поиск потенциальных клиентов.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Переговоры на стороне клиента.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Ведение клиентской базы.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Выполнение плана продаж.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Контроль оплаты товаров и услуг клиентами.
+                    </li>
+                  </ul>
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Требования
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы в продажах от 2-х лет.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Умение мотивировать клиента на покупку.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Уверенный пользователь ПК.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы с CRM-системами будет вашим преимуществом.
+                    </li>
+                  </ul>
+                  <a class="vacancy__list-btn-popup  btn button popup--link" href="#vacancy">Отправить резюме</a>
+                </div>
+              </li>
+              <li class="vacancy__list-item">
+                <button class="vacancy__list-btn js-vacancy" type="button">
+                  <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.7551 1V26M26 13.9808H1" stroke="#666666" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <div class="vacancy__list-item-top">
+                  <div class="vacancy__info">
+                    <div class="vacancy__name">
+                      Менеджер по продажам
+                    </div>
+                    <div class="vacancy__price">
+                      35 000 р
+                    </div>
+                  </div>
+                  <div class="vacancy__experience">
+                    Опыт работы: 1-3 года — Постоянная
+                  </div>
+                  <div class="vacancy__discr text">
+                    Логист в нашей компании — важнейшее звено в цепи между продавцом и клиентом. Наши логисты занимаются
+                    организацией отгрузок продукции и следят за их реализацией.
+                  </div>
+                </div>
+                <div class="vacancy__subitem-block">
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Обязанности
+                    </li>
+                    <li class="vacancy__subitem">
+                      Поиск потенциальных клиентов.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Переговоры на стороне клиента.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Ведение клиентской базы.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Выполнение плана продаж.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Контроль оплаты товаров и услуг клиентами.
+                    </li>
+                  </ul>
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Требования
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы в продажах от 2-х лет.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Умение мотивировать клиента на покупку.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Уверенный пользователь ПК.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы с CRM-системами будет вашим преимуществом.
+                    </li>
+                  </ul>
+                  <a class="vacancy__list-btn-popup  btn button popup--link" href="#vacancy">Отправить резюме</a>
+                </div>
+              </li>
+            </ul>
+            <div class="vacancy__title title">
+              Склад
+            </div>
+            <ul class="vacancy__list">
+              <li class="vacancy__list-item">
+                <button class="vacancy__list-btn js-vacancy" type="button">
+                  <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.7551 1V26M26 13.9808H1" stroke="#666666" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <div class="vacancy__list-item-top">
+                  <div class="vacancy__info">
+                    <div class="vacancy__name">
+                      Логист
+                    </div>
+                    <div class="vacancy__price">
+                      35 000 р
+                    </div>
+                  </div>
+                  <div class="vacancy__experience">
+                    Опыт работы: 1-3 года — Постоянная
+                  </div>
+                  <div class="vacancy__discr text">
+                    Логист в нашей компании — важнейшее звено в цепи между продавцом и клиентом. Наши логисты занимаются
+                    организацией отгрузок продукции и следят за их реализацией.
+                  </div>
+                </div>
+                <div class="vacancy__subitem-block">
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Обязанности
+                    </li>
+                    <li class="vacancy__subitem">
+                      Поиск потенциальных клиентов.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Переговоры на стороне клиента.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Ведение клиентской базы.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Выполнение плана продаж.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Контроль оплаты товаров и услуг клиентами.
+                    </li>
+                  </ul>
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Требования
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы в продажах от 2-х лет.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Умение мотивировать клиента на покупку.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Уверенный пользователь ПК.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы с CRM-системами будет вашим преимуществом.
+                    </li>
+                  </ul>
+                  <a class="vacancy__list-btn-popup btn button popup--link" href="#vacancy">Отправить резюме</a>
+                </div>
+              </li>
+              <li class="vacancy__list-item">
+                <button class="vacancy__list-btn js-vacancy" type="button">
+                  <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.7551 1V26M26 13.9808H1" stroke="#666666" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+
+                </button>
+                <div class="vacancy__list-item-top">
+                  <div class="vacancy__info">
+                    <div class="vacancy__name">
+                      Системный администратор
+                    </div>
+                    <div class="vacancy__price">
+                      35 000 р
+                    </div>
+                  </div>
+                  <div class="vacancy__experience">
+                    Опыт работы: 1-3 года — Постоянная
+                  </div>
+                  <div class="vacancy__discr text">
+                    Логист в нашей компании — важнейшее звено в цепи между продавцом и клиентом. Наши логисты занимаются
+                    организацией отгрузок продукции и следят за их реализацией.
+                  </div>
+                </div>
+                <div class="vacancy__subitem-block">
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Обязанности
+                    </li>
+                    <li class="vacancy__subitem">
+                      Поиск потенциальных клиентов.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Переговоры на стороне клиента.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Ведение клиентской базы.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Выполнение плана продаж.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Контроль оплаты товаров и услуг клиентами.
+                    </li>
+                  </ul>
+                  <ul class="vacancy__sublist">
+                    <li class="vacancy__subitem">
+                      Требования
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы в продажах от 2-х лет.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Умение мотивировать клиента на покупку.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Уверенный пользователь ПК.
+                    </li>
+                    <li class="vacancy__subitem">
+                      Опыт работы с CRM-системами будет вашим преимуществом.
+                    </li>
+                  </ul>
+                  <a class="vacancy__list-btn-popup btn button popup--link" href="#vacancy">Отправить резюме</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="page__sidebar">
+            <div class="sidebar page__sidebar-item">
+              <ul class="sidebar__list">
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link " href="#">
+                      О компании
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <button class="sidebar__link js-sidebar-link" type="button">
+                      Услуги
+                    </button>
+                  </div>
+                  <ul class="sidebar__sublist">
+                    <li class="sidebar__subitem ">
+                      <a class="sidebar__sublink" href="#">
+                        Обмен баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Продажа баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Аренда баллонов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка газификаторов
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Производство не типовых изделий
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка сосудов Дьюара
+                      </a>
+                    </li>
+                    <li class="sidebar__subitem">
+                      <a class="sidebar__sublink" href="#">
+                        Заправка газгольдера
+                      </a>
+                    </li>
+
+                  </ul>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Доставка
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Оплата
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Гарантия и возврат
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item ">
+                  <div class="sidebar__top ">
+                    <a class="sidebar__link " href="#">
+                      Вопросы и ответы
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link " href="#">
+                      Отзывы
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link _open" href="#">
+                      Вакансии
+                    </a>
+                  </div>
+                </li>
+                <li class="sidebar__item">
+                  <div class="sidebar__top">
+                    <a class="sidebar__link" href="#">
+                      Контакты
+                    </a>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="evaluations">
+      <div class="container">
+        <div class="evaluations__title title">
+          Оценки сотрудников
+        </div>
+        <div class="evaluations__grid">
+          <div class="evaluations__item">
+            <div class="evaluations__col title">
+              4,9
+            </div>
+            <div class="evaluations__info">
+              <div class="evaluations__name">
+                Условия труда
+              </div>
+              <div class="evaluations__stroke">
+                <span style="width: 95%;"></span>
+              </div>
+              <div class="evaluations__text">
+                Отлично
+              </div>
+            </div>
+          </div>
+          <div class="evaluations__item">
+            <div class="evaluations__col title title">
+              4,9
+            </div>
+            <div class="evaluations__info">
+              <div class="evaluations__name">
+                Руководство
+              </div>
+              <div class="evaluations__stroke">
+                <span style="width: 95%;"></span>
+              </div>
+              <div class="evaluations__text">
+                Отлично
+              </div>
+            </div>
+          </div>
+          <div class="evaluations__item">
+            <div class="evaluations__col title">
+              4,8
+            </div>
+            <div class="evaluations__info">
+              <div class="evaluations__name">
+                Уровень дохода
+              </div>
+              <div class="evaluations__stroke">
+                <span style="width: 92%;"></span>
+              </div>
+              <div class="evaluations__text">
+                Отлично
+              </div>
+            </div>
+          </div>
+          <div class="evaluations__item">
+            <div class="evaluations__col title">
+              4,5
+            </div>
+            <div class="evaluations__info">
+              <div class="evaluations__name">
+                Условия для отдыха
+              </div>
+              <div class="evaluations__stroke">
+                <span style="width: 86%;"></span>
+              </div>
+              <div class="evaluations__text">
+                Отлично
+              </div>
+            </div>
+          </div>
+          <div class="evaluations__item">
+            <div class="evaluations__col title">
+              5
+            </div>
+            <div class="evaluations__info">
+              <div class="evaluations__name">
+                Коллектив
+              </div>
+              <div class="evaluations__stroke">
+                <span style="width: 100%;"></span>
+              </div>
+              <div class="evaluations__text">
+                Отлично
+              </div>
+            </div>
+          </div>
+          <div class="evaluations__item">
+            <div class="evaluations__col title">
+              4,9
+            </div>
+            <div class="evaluations__info">
+              <div class="evaluations__name">
+                Возможности роста
+              </div>
+              <div class="evaluations__stroke">
+                <span style="width: 95%;"></span>
+              </div>
+              <div class="evaluations__text">
+                Отлично
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="evaluations__bottom">
+          <ul class="evaluations__list">
+            <li class="evaluations__bottom-item">
+              <div class="evaluations__item-title">
+                <span class="evaluations__item-col">4,8</span>
+                <span>Отлично</span>
+              </div>
+              <div class="evaluations__item-text text">
+                Оценка Dream Job
+              </div>
+            </li>
+            <li class="evaluations__bottom-item">
+              <div class="evaluations__item-title">
+                <span class="evaluations__item-col">
+                  95%
+                </span>
+              </div>
+              <div class="evaluations__item-text text">
+                Рекомендуют работодателя
+              </div>
+            </li>
+          </ul>
+          <a class="evaluations__link btn button" href="#">
+            Ознакомиться с отзывами на Dream Job
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <div class="order-payment _2">
+      <div class="order-payment__decor _1">
+
+      </div>
+      <div class="order-payment__decor _2">
+
+      </div>
+      <div class="container">
+        <div class="order-payment__inner">
+          <div class="order-payment__text">
+            Следите за нами в телеграм:
+          </div>
+          <div class="order-payment__btns">
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Наш канал
+            </a>
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Бот-помощник
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  @include('components/_footer.html')
+
+
+  @include('components/_popup.html')
+  @include('components/_popup-cons.html')
+  @include('components/_popup-vacancy.html')
+  @include('components/_popup-calculation.html')
+
+  @include('components/_footer-scripts.html')

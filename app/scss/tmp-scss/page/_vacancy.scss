@@ -1,0 +1,294 @@
+.vacancy {
+  padding: 30px 0 65px;
+  background-color: $bg;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__top {
+    padding: 50px;
+    border: 1px solid $grey;
+    background-color: $white;
+
+    @include adpt ($tab-r) {
+      padding: 20px 15px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 70px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__top-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+
+    @include adpt ($tab-r) {
+      flex-direction: column-reverse;
+    }
+
+    @include adpt ($stab-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__top-text {
+    font-size: 18px;
+    line-height: 1.72;
+    letter-spacing: 0.18px;
+
+    @include adpt ($tab-r) {
+      font-size: 16px;
+    }
+
+    @include adpt ($stab-r) {
+      font-size: 14px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+      line-height: 1.58;
+    }
+  }
+
+  &__btn-wrap {
+    max-width: 171px;
+    margin-right: 50px;
+    flex: 1;
+
+    @include adpt ($tab-r) {
+      max-width: 165px;
+      margin-right: 0;
+      margin-top: 30px;
+    }
+
+    @include adpt ($bmob-r) {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  &__top-content {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__top-left {
+    margin-right: 100px;
+
+    @include adpt ($tab-r) {
+      margin-right: 50px;
+
+      @include adpt ($bmob-r) {
+        margin-right: 18px;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  &__label-text {
+    font-size: 16px;
+    color: $headers;
+    line-height: 1.25;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      line-height: 1.42;
+      color: $headers;
+    }
+  }
+
+  &__btn {
+    padding: 10px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 70px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    border: 1px solid $grey;
+    background-color: $white;
+    padding: 50px;
+
+    @include adpt ($tab-r) {
+      padding: 30px 15px;
+    }
+  }
+
+  &__list-btn {
+    position: absolute;
+    top: 45px;
+    right: 50px;
+    display: block;
+    transition: transform 0.3s;
+
+    @include adpt ($tab-r) {
+      top: 25px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      right: 15px;
+    }
+
+    &:hover {
+      & svg path {
+        stroke: $red;
+      }
+    }
+
+    &._open {
+      transform: rotate(45deg);
+
+      & svg path {
+        stroke: $red;
+      }
+    }
+
+    & svg {
+      width: 25px;
+      height: 25px;
+      object-fit: contain;
+
+      @include adpt ($tab-r) {
+        width: 15px;
+        height: 15px;
+      }
+
+      & path {
+        transition: stroke 0.3s;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    color: $headers;
+    line-height: 1.25;
+    padding-right: 85px;
+    margin-bottom: 10px;
+
+    @include adpt ($tab-r) {
+      padding-right: 40px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+      line-height: 1.5;
+      align-items: flex-start;
+      flex-direction: column;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__name {
+    margin-right: 30px;
+
+    @include adpt ($bmob-r) {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__price {
+    white-space: nowrap;
+  }
+
+  &__experience {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  &__subitem-block {
+    margin-top: 60px;
+    display: none;
+
+    @include adpt ($bmob-r) {
+      margin-top: 30px;
+    }
+  }
+
+  &__sublist {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__subitem {
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    &:first-child {
+      font-family: $secondFont;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.25;
+      margin-bottom: 10px;
+      color: $headers;
+
+      @include adpt ($bmob-r) {
+        font-size: 18px;
+        margin-bottom: 5px;
+        line-height: 1.5;
+      }
+    }
+
+    &:not(:first-child) {
+      &::before {
+        content: "—";
+      }
+    }
+  }
+
+  &__list-btn-popup {
+    margin-top: 20px;
+
+    @include adpt ($bmob-r) {
+      margin-top: 10px;
+      width: 100%;
+    }
+  }
+}

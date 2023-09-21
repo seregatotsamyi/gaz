@@ -1,0 +1,35 @@
+.breadcrumbs {
+  padding: 30px 0 20px;
+
+  @include adpt ($bmob-r) {
+    padding: 50px 0 20px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      &::after {
+        content: "—";
+        position: absolute;
+        top: 50%;
+        transform: translate(100%, -50%);
+        right: -2px;
+      }
+    }
+
+    & a {
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

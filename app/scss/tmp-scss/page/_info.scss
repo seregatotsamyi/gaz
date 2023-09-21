@@ -1,0 +1,58 @@
+.info {
+  &__inner {
+    position: relative;
+    border-radius: 6px;
+    background-color: rgba(234, 147, 9, 0.1);
+    padding: 23px 18px 23px 85px;
+
+    @include adpt ($stab-r) {
+      padding-left: 70px;
+    }
+
+    @include adpt ($bmob-r) {
+      padding: 10px 10px 10px 45px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/categories/1.svg');
+      width: 45px;
+      height: 43px;
+      left: 25px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @include adpt ($stab-r) {
+        width: 35px;
+        height: 43px;
+        left: 18px;
+      }
+
+      @include adpt ($bmob-r) {
+        left: 10px;
+        top: 12px;
+        width: 25px;
+        height: 31px;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    color: $headers;
+    line-height: 1.27;
+
+    @include adpt ($tab-r) {
+      font-size: 16px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+      line-height: 1.58;
+    }
+  }
+}

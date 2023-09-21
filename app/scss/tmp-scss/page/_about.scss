@@ -1,0 +1,159 @@
+.about-page {
+  padding: 40px 0 65px;
+  background-color: $bg;
+
+  @include adpt ($bmob-r) {
+    padding: 25px 0 30px;
+  }
+
+  &__inner {
+    font-size: 18px;
+    line-height: 1.3;
+
+    @include adpt ($tab-r) {
+      font-size: 16px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 70px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 50px;
+      }
+    }
+
+    & p:not(:last-child) {
+      margin-bottom: 15px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 10px;
+      }
+    }
+
+    & img {
+      border-radius: 6px;
+      width: 100%;
+      height: auto;
+      box-shadow: -4px 0px 12px 2px rgba(51, 51, 51, 0.11);
+
+      @include adpt ($bmob-r) {
+        border-radius: 4px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 40px;
+
+        @include adpt ($bmob-r) {
+          margin-top: 30px;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+
+        @include adpt ($bmob-r) {
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    & b {
+      font-family: $secondFont;
+      color: $yellow;
+      font-weight: 500;
+
+      @include adpt ($bmob-r) {
+        font-weight: 300;
+        font-family: $mainFont;
+      }
+    }
+  }
+
+  &__price-table {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.about-title {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: 65%;
+    background-image: url('../images/decor/stroke3.svg');
+    background-size: 100%;
+    height: 3px;
+    background-repeat: no-repeat;
+
+    @include adpt ($bmob-r) {
+      left: calc(100% - 70px);
+      height: 1px;
+      width: 70px;
+      background-image: url('../images/decor/stroke4.svg');
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    line-height: 43px;
+    padding-right: 75px;
+
+    @include adpt ($big-r) {
+      line-height: 36px;
+    }
+
+    @include adpt ($tab-r) {
+      padding-right: 50px;
+      line-height: 31px;
+    }
+
+    @include adpt ($bmob-r) {
+      padding-right: 40px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/categories/1.svg');
+      width: 35px;
+      height: 43px;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      @include adpt ($big-r) {
+        height: 36px;
+        width: 29px;
+      }
+
+      @include adpt ($tab-r) {
+        height: 31px;
+        width: 25px;
+      }
+    }
+  }
+}

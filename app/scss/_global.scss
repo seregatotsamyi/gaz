@@ -60,3 +60,193 @@ body {
     object-fit: contain;
   }
 }
+
+.wave {
+  background: rgba(255, 255, 255, .4);
+  border-radius: 50%;
+  transform: scale(0);
+  animation: wave 0.7s linear;
+  pointer-events: none;
+  position: absolute;
+}
+
+._fixed {
+  overflow: hidden;
+}
+
+._shadow {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 9;
+    pointer-events: none;
+  }
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+
+  &__img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+  }
+}
+
+@keyframes wave {
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.big-title {
+  font-family: $secondFont;
+  font-size: 45px;
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: 1.35px;
+
+  @include adpt ($big-r) {
+    font-size: 42px;
+  }
+
+  @include adpt ($tab-r) {
+    font-size: 40px;
+    letter-spacing: 1.1px;
+  }
+
+  @include adpt ($stab-r) {
+    font-size: 35px;
+  }
+
+  @include adpt ($bmob-r) {
+    font-size: 30px;
+    letter-spacing: 1.2px;
+  }
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  padding: 10px 23px;
+  display: inline-block;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.48px;
+  line-height: 1.66;
+  text-align: center;
+  color: $white;
+  background-color: $red;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+
+  @include adpt ($bmob-r) {
+    padding: 10px 13px;
+  }
+
+  &:active {
+    border-color: $white;
+    color: $red;
+    background-color: $white;
+  }
+
+  &_2 {
+    background-color: $white;
+    color: $red;
+
+    &:hover {
+      color: $white;
+      background-color: $red;
+    }
+  }
+
+  &_3 {
+    background-color: $telegram;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 7px 20px;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+    }
+  }
+
+  &_4 {
+    background-color: $yellow;
+    color: $white;
+  }
+
+  &._wa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $whatsapp;
+
+    & img {
+      margin-right: 7px;
+      pointer-events: none;
+    }
+  }
+}
+
+.categories-span {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: $secondFont;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.13;
+  color: $headers;
+
+  @include adpt ($big-r) {
+    font-size: 28px;
+  }
+
+  @include adpt ($tab-r) {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  @include adpt ($stab-r) {
+    font-size: 24px;
+  }
+
+  @include adpt ($bmob-r) {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+}
+
+.heart {
+  display: block;
+
+  &._active {
+    & svg path {
+      fill: $red;
+    }
+  }
+
+  & svg path {
+    transition: fill 0.3s;
+  }
+}
+
+._bg {
+  background-color: $bg;
+}

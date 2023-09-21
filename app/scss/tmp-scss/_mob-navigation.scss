@@ -1,0 +1,117 @@
+.mob-navigation {
+  position: fixed;
+  z-index: 1050;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $headers;
+  color: $white;
+  padding: 30px 20px;
+  overflow-y: auto;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+
+  &._open {
+    pointer-events: all;
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &__logo {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    margin: 0 auto 60px;
+  }
+
+  &__burger {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+
+  &__list {
+    background: transparent;
+    overflow: visible;
+    color: $white;
+  }
+
+  &__list-wrap {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    padding-left: 30px;
+
+    & .next {
+      &::after {
+        background-image: url('../images/icon/mob-navigation-right.svg');
+        height: 11px;
+        width: 6px;
+        opacity: 1;
+        margin-left: 22px;
+        background-size: contain;
+      }
+    }
+
+    & a {
+      color: $white;
+
+      &:not(.back) {
+        color: $white;
+        padding: 10px;
+        font-size: 18px;
+        line-height: 1.27;
+        display: inline-flex;
+      }
+    }
+
+    & li {
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+
+    & .title {
+      color: $white;
+      font-family: $secondFont;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.45;
+      padding: 10px;
+    }
+
+    & li.header {
+      margin-bottom: 5px;
+      position: relative;
+      transform: translateX(-30px);
+    }
+
+    & .back {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+
+      &::before {
+        background-image: url('../images/icon/mob-navigation-right.svg');
+        height: 11px;
+        width: 6px;
+        transform: rotate(180deg);
+        opacity: 1;
+        background-size: contain;
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    & ul {
+      padding-right: 30px;
+    }
+  }
+}

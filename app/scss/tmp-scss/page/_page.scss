@@ -1,0 +1,38 @@
+.page {
+
+  display: grid;
+  grid-template-columns: 1fr 310px;
+  grid-gap: 10px;
+  position: relative;
+
+  @include adpt ($tab-r) {
+    grid-template-columns: 1fr 280px;
+  }
+
+  @include adpt ($stab-r) {
+    grid-template-columns: 1fr;
+  }
+
+  &._about {
+    grid-gap: 50px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__sidebar {
+    @include adpt ($stab-r) {
+      display: none;
+    }
+
+  }
+
+  &__sidebar-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}

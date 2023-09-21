@@ -5,10 +5,12 @@ $text: var(--text-color);
 $headers: var(--headers-color);
 $bg: var(--bg-color);
 $whatsapp: var(--whatsapp-color);
+$telegram: var(--telegram-color);
 $grey: var(--grey-color);
 $lightGrey: var(--light-grey-color);
 
 $mainFont: var(--main-font);
+$secondFont: var(--second-font);
 
 
 :root {
@@ -17,7 +19,8 @@ $mainFont: var(--main-font);
   --headers-color: #333;
   --yellow-color: #EA9309;
   --white-color: #ffffff;
-  --whatsapp-color: #43D854;
+  --whatsapp-color: #43D854; 
+  --telegram-color: #08C; 
   --bg-color: #F8F8F8;
   --grey-color: #EEEDED;
   --light-grey-color: #F1F1F1;
