@@ -433,7 +433,7 @@ $(function () {
 
   //js-contact-page-slider
   const contactPageSlider = new Swiper('.js-contact-page-slider', {
-    slidesPerView: 5,
+    slidesPerView: 1,
     grid: {
       rows: 3,
       fill: "row",
@@ -441,6 +441,14 @@ $(function () {
     navigation: {
       nextEl: '.reviews__arrow_next',
       prevEl: '.reviews__arrow_prev',
+    },
+    breakpoints: {
+      769: {
+        slidesPerView: 4,
+      },
+      1025: {
+        slidesPerView: 5,
+      },
     },
 
   });
