@@ -1,0 +1,29 @@
+.counter {
+  width: 70px;
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input--wrap {
+    flex: 1;
+    margin: 0 2px;
+  }
+
+  &__input {
+    outline: none;
+    text-align: center;
+    color: $headers;
+    width: 100%;
+    max-width: 100%;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+    }
+  }
+}

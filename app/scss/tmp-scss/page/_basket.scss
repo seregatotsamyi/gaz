@@ -3,6 +3,11 @@
   background-color: $bg;
   border-bottom: 1px solid $grey;
 
+  @include adpt ($tab-r) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
   &__reset {
     margin-bottom: 30px;
     left: 100%;
@@ -18,6 +23,12 @@
     border: 1px solid $grey;
     background-color: $white;
     padding: 30px;
+
+    @include adpt ($bmob-r) {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__listing {
@@ -28,9 +39,21 @@
     border-bottom: 1px solid $grey;
     margin-bottom: 20px;
 
+    @include adpt ($bmob-r) {
+      padding-bottom: 0;
+      padding-top: 20px;
+      margin-bottom: 30px;
+      border: none;
+      border-top: 1px solid $grey;
+    }
+
     & span {
       color: $headers;
       font-size: 16px;
+
+      @include adpt ($bmob-r) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -40,6 +63,11 @@
     font-weight: 500;
     color: $headers;
     line-height: 1.25;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px !important;
+      line-height: 1.5;
+    }
   }
 
   &__summa {
@@ -47,6 +75,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+
+    @include adpt ($bmob-r) {
+      order: -1;
+      margin-bottom: 20px;
+    }
   }
 
   &__box-summa {
@@ -58,8 +91,226 @@
     width: 100%;
   }
 
+  &__sidebar {
+    @include adpt ($tab-r) {
+      width: calc(100% + 40px);
+      left: -20px;
+      position: relative;
+      padding: 20px 20px 60px;
+      background-color: $white;
+      border-top: 1px solid $grey;
+    }
+  }
+
   &__page {
     grid-template-columns: 1fr 400px;
     grid-gap: 50px;
+
+    @include adpt ($tab-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @include adpt ($bmob-r) {
+      flex-direction: column;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      padding-bottom: 29px;
+      border-bottom: 1px solid $grey;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 20px;
+        padding-bottom: 19px;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    margin-right: 25px;
+
+    @include adpt ($bmob-r) {
+      margin-right: 0;
+    }
+  }
+
+  &__img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    margin-right: 30px;
+    border-radius: 6px;
+    border: 1px solid $grey;
+    transition: border-color 0.3s;
+
+    @include adpt ($bmob-r) {
+      width: 85px;
+      height: 85px;
+      margin-right: 10px;
+    }
+
+    &:hover {
+      border-color: $headers;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__right {
+    flex: 1;
+    max-width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include adpt ($bmob-r) {
+      margin-left: 95px;
+      flex-direction: row;
+      margin-top: 11px;
+      max-width: 100%;
+    }
+  }
+
+  &__price {
+    font-family: $secondFont;
+    font-size: 16px;
+    font-weight: 500;
+    color: $headers;
+    line-height: 1.25;
+    margin-bottom: 30px;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      line-height: 1.42;
+      margin-bottom: 0;
+    }
+
+    &._mob {
+      display: none;
+
+      @include adpt ($bmob-r) {
+        display: block;
+      }
+    }
+
+    &._ds {
+      @include adpt ($bmob-r) {
+        display: none;
+      }
+    }
+  }
+
+  &__name {
+    font-family: $secondFont;
+    font-size: 16px;
+    color: $headers;
+    font-weight: 500;
+    line-height: 1.25;
+    margin-bottom: 20px;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      line-height: 1.92;
+      margin-bottom: 0;
+    }
+  }
+
+  &__info-item {
+    opacity: 0.8;
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__info-status {
+    position: relative;
+    display: block;
+    opacity: 0.8;
+    padding-left: 8px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      opacity: 0.8;
+    }
+
+    &._green {
+      color: $whatsapp;
+
+      &::after {
+        background-color: $whatsapp;
+      }
+    }
+  }
+
+  &__del {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include adpt ($bmob-r) {
+      width: 25px;
+      height: 25px;
+    }
+
+    &:hover {
+      & svg path {
+        fill: $red;
+      }
+    }
+
+    & svg {
+      @include adpt ($bmob-r) {
+        width: 14px;
+        height: 14px;
+        object-fit: contain;
+      }
+    }
+
+    & svg path {
+      transition: fill 0.3s;
+    }
+  }
+
+  &__counter {
+    margin-bottom: 35px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 0;
+      margin-right: 30px;
+    }
   }
 }
