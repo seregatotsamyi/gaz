@@ -1,0 +1,155 @@
+.order-success {
+  padding: 30px 0 70px;
+  background-color: $bg;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__return-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
+
+  &__return {
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+    @include adpt ($bmob-r) {
+      max-width: 140px;
+      margin-bottom: 45px;
+    }
+  }
+
+  &__title {
+    color: $red;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 80px;
+    margin-bottom: 60px;
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 35px;
+    }
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__list {
+    @include adpt ($stab-r) {
+      order: -1;
+    }
+  }
+
+  &__item {
+    font-size: 20px;
+    line-height: 1.25;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+
+      @include adpt ($bmob-r) {
+        margin-bottom: 20px;
+      }
+    }
+
+    & span {
+      &:not(:last-child) {
+        margin-right: 20px;
+
+        @include adpt ($bmob-r) {
+          margin-right: 13px;
+        }
+      }
+
+      &:not(:first-child) {
+        color: $headers;
+      }
+    }
+  }
+
+  & .order__info-list {
+    padding-top: 0;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & a {
+      font-size: 16px;
+      line-height: 1.25;
+      text-decoration: underline;
+
+      @include adpt ($bmob-r) {
+        font-size: 14px;
+        line-height: 1.42;
+      }
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__print {
+    position: relative;
+    margin-right: 40px;
+    padding-left: 37px;
+
+    @include adpt ($bmob-r) {
+      margin-right: 25px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 27px;
+      height: 27px;
+      background-image: url('../images/icon/printer_akhaqdv6wgmj 1.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+
+    }
+  }
+}

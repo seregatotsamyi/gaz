@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaz - order-succes</title>
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
+  <link rel="stylesheet" href="libs/select2.min.css">
+  <link rel="stylesheet" href="libs/slinky.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="stylesheet" href="css/page.min.css">
+</head>
+
+<body class="body" id="body">
+
+  @include('components/_header.html')
+  @include('components/_header-fix.html')
+  @include('components/_search.html')
+  @include('components/_tiles.html')
+
+
+  <main class="main">
+
+
+    <section class="order-success">
+      <div class="container">
+        <div class="order-success__return-wrap">
+          <a class="order-success__return" href="#">
+            Вернуться на главную
+          </a>
+        </div>
+
+        <a class="order-success__logo logo" href="#">
+          <img class="logo__img" src="images/logo3.svg" alt="logo" width="271" height="121">
+        </a>
+        <div class="order-success__title title">
+          Спасибо за заказ!
+        </div>
+        <div class="order-success__subtitle title">
+          Ваш заказ успешно оформлен
+        </div>
+        <div class="order-success__inner">
+          <div class="order__info">
+            <ul class="order__info-list">
+              <li class="order__info-item">
+                <div class="order__info-name text">
+                  Технический пропан
+                </div>
+                <div class="order__info-bottom">
+                  <div class="order__info-col">
+                    <span>10 000 Р</span> х <span>3</span>
+                  </div>
+                  <span>30 000 Р</span>
+                </div>
+              </li>
+            </ul>
+            <div class="order__info-summa">
+              <span></span> <span>30 000 Р</span>
+            </div>
+          </div>
+          <ul class="order-success__list">
+            <li class="order-success__item">
+              <span>Номер Вашего заказа</span><span class="_red">№756</span>
+            </li>
+            <li class="order-success__item">
+              <span>Адрес</span><span>г. Москва, ул.Советская 23</span>
+            </li>
+            <li class="order-success__item">
+              <span>Оплата</span><span>СПБ</span>
+            </li>
+          </ul>
+        </div>
+        <div class="order-success__bottom">
+          <a class="order-success__print" href="#">
+            Распечатать
+          </a>
+          <a class="order-success__link" href="#">
+            Отправить по E-mail
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="order-payment _2">
+      <div class="order-payment__decor _1">
+
+      </div>
+      <div class="order-payment__decor _2">
+
+      </div>
+      <div class="container">
+        <div class="order-payment__inner">
+          <div class="order-payment__text">
+            Следите за нами в телеграм:
+          </div>
+          <div class="order-payment__btns">
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Наш канал
+            </a>
+            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
+              Бот-помощник
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  @include('components/_footer.html')
+
+  @include('components/_popup.html')
+  @include('components/_popup-cons.html')
+  @include('components/_popup-calculation.html')
+
+  @include('components/_footer-scripts.html')

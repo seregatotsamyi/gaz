@@ -96,12 +96,21 @@
     border: 1px solid $grey;
     background-color: $white;
 
+    @include adpt ($bmob-r) {
+      padding: 20px 15px;
+    }
+
     & span {
       font-family: $secondFont;
       font-size: 16px;
       line-height: 1.25;
       color: $headers;
       font-weight: 500;
+
+      @include adpt ($bmob-r) {
+        font-size: 18px;
+        line-height: 1.8;
+      }
     }
 
     &._ds {
@@ -133,12 +142,26 @@
     }
   }
 
+  &__info-col {
+    @include adpt ($bmob-r) {
+      font-size: 16px;
+    }
+  }
+
   &__info-list {
     padding: 20px 0;
+
+    @include adpt ($bmob-r) {
+      padding: 10px 0;
+    }
   }
 
   &__info-name {
     margin-bottom: 10px;
+
+    @include adpt ($bmob-r) {
+      font-size: 18px;
+    }
   }
 
   &__info-bottom {
@@ -153,6 +176,10 @@
     border-top: 1px solid $grey;
     justify-content: space-between;
     align-items: center;
+
+    @include adpt ($bmob-r) {
+      padding-top: 9px;
+    }
 
     & span:nth-child(2) {
       color: $red;
