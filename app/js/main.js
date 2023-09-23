@@ -482,6 +482,32 @@ $(function () {
   //countr-end 
 
 
+  //product
+  $('.js-product-main-slider').slick({
+    arrows: false,
+    asNavFor: '.js-product-second-slider',
+    //fade: true,
+    swipe: false,
+  })
+  $('.js-product-second-slider').slick({
+    arrows: false,
+    asNavFor: '.js-product-main-slider',
+    slidesToShow: 6,
+    focusOnSelect: true,
+    swipeToSlide: true,
+    swipe: true,
+    draggable: true,
+  })
+
+  $(document).on('click', '.js-show-spec', function (e) {
+    e.preventDefault()
+    $(this).toggleClass('_open')
+    $(this).parents('.product__specifications').find('.product__specifications-sublist').slideToggle();
+  })
+
+  //product
+
+
 
   //click outside
 
