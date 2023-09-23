@@ -1,0 +1,464 @@
+.order {
+  padding: 50px 0 65px;
+  background-color: $bg;
+
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+
+    @include adpt ($tab-r) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__top-left {
+    flex: 1;
+    margin-right: 40px;
+    max-width: 620px;
+
+    @include adpt ($tab-r) {
+      margin-right: 0;
+    }
+  }
+
+  &__top-right {
+    flex: 1;
+    max-width: 400px;
+
+    @include adpt ($tab-r) {
+      display: none;
+    }
+  }
+
+  &__input-inner {
+    display: grid;
+    grid-gap: 30px;
+
+    @include adpt ($tab-r) {
+      grid-gap: 20px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    font-size: 20px;
+    line-height: 1.25;
+    color: $headers;
+    display: block;
+    margin-bottom: 10px;
+
+    @include adpt ($tab-r) {
+      font-size: 18px;
+      line-height: 1.27;
+    }
+
+  }
+
+  &__input-input {
+    max-width: 100%;
+    width: 100%;
+    padding: 17px 20px;
+    border-radius: 4px;
+    border: 1px solid $yellow;
+    color: $headers;
+    font-size: 20px;
+    line-height: 1.25;
+    outline: none;
+
+    @include adpt ($tab-r) {
+      font-size: 16px;
+      padding: 15px;
+    }
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    &::placeholder {
+      opacity: 0.3;
+    }
+
+    &._textarea {
+      resize: vertical;
+      min-height: 146px;
+    }
+  }
+
+  &__info {
+    padding: 30px;
+    border: 1px solid $grey;
+    background-color: $white;
+
+    & span {
+      font-family: $secondFont;
+      font-size: 16px;
+      line-height: 1.25;
+      color: $headers;
+      font-weight: 500;
+    }
+
+    &._ds {
+      @include adpt ($tab-r) {
+        display: none;
+      }
+    }
+  }
+
+  &__info-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 19px;
+    border-bottom: 1px solid $grey;
+
+    & a {
+      text-decoration: underline;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__info-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__info-list {
+    padding: 20px 0;
+  }
+
+  &__info-name {
+    margin-bottom: 10px;
+  }
+
+  &__info-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info-summa {
+    display: flex;
+    padding-top: 19px;
+    border-top: 1px solid $grey;
+    justify-content: space-between;
+    align-items: center;
+
+    & span:nth-child(2) {
+      color: $red;
+    }
+  }
+
+  &__option {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-bottom: 30px;
+
+    @include adpt ($tab-r) {
+      flex-direction: column;
+      max-width: 620px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__option-item {
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid $yellow;
+    flex: 1;
+
+    @include adpt ($bmob-r) {
+      padding: 10px;
+    }
+
+
+    &:not(:last-child) {
+      margin-right: 40px;
+
+      @include adpt ($tab-r) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &._payment {
+      max-width: 535px;
+
+      @include adpt ($tab-r) {
+        max-width: 100%;
+      }
+
+      @include adpt ($bmob-r) {
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &__payment-inner {
+    padding-left: 76px;
+    background-image: url('../images/icon/wallet_z7y5rvdhb0wd 1.svg');
+    background-size: 36px 36px;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    @include adpt ($bmob-r) {
+      padding-left: 0;
+      background-position: 10px 0;
+    }
+  }
+
+  &__payment-title {
+    margin-bottom: 30px;
+
+    @include adpt ($bmob-r) {
+      padding-left: 55px;
+      padding-top: 10px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__delivery-radio-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked+label {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__delivery-label {
+    font-size: 20px;
+    color: $headers;
+    line-height: 1.25;
+    padding-left: 33px;
+    position: relative;
+    cursor: pointer;
+
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      padding-left: 28px;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &::after {
+      width: 13px;
+      height: 13px;
+      top: 4px;
+      border: 1px solid $red;
+
+      @include adpt ($bmob-r) {
+        top: 2px;
+      }
+    }
+
+    &::before {
+      width: 9px;
+      height: 9px;
+      background-color: $red;
+      top: 6px;
+      left: 2px;
+      opacity: 0;
+      transition: opacity 0.3s;
+
+      @include adpt ($bmob-r) {
+        top: 4px;
+      }
+    }
+  }
+
+  &__delivery-inner {
+    padding-left: 85px;
+    background-image: url('../images/icon/gas_truck_mrq52t2io1cd 1.svg');
+    background-size: 45px 45px;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    @include adpt ($bmob-r) {
+      padding-left: 0;
+      background-position: 10px 10px;
+    }
+  }
+
+  &__delivery-radio {
+    @include adpt ($bmob-r) {
+      padding-left: 80px;
+      padding-top: 10px;
+    }
+  }
+
+  &__info-table {
+    margin-top: 15px;
+
+    & .info__inner {
+      &::after {
+        @include adpt ($bmob-r) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    & .info__text {
+      font-size: 16px;
+
+      @include adpt ($bmob-r) {
+        font-size: 12px;
+      }
+
+    }
+  }
+
+  &__delivery-radio-item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__delivery-address {
+    max-width: 100%;
+    width: 100%;
+    outline: none;
+    margin-top: 10px;
+    padding: 17px 20px;
+    border-radius: 4px;
+    border: 1px solid #E9E6E7;
+    font-size: 20px;
+    line-height: 1.25;
+
+    @include adpt ($bmob-r) {
+      padding: 10px;
+      font-size: 14px;
+      margin: 30px 0;
+    }
+
+    &::placeholder {
+      opacity: 0.3;
+    }
+  }
+
+  &__bottom {
+    max-width: 705px;
+  }
+
+  & .order__input {
+    max-width: 620px;
+  }
+
+  &__input {
+    &._doc {
+      margin: 44px 0 15px;
+
+      @include adpt ($tab-r) {
+        margin: 20px 0 10px;
+      }
+
+      & .order__label {
+        max-width: 100%;
+        width: 100%;
+        padding: 17px 20px;
+        border-radius: 4px;
+        border: 1px solid $yellow;
+        color: $headers;
+        font-size: 20px;
+        line-height: 1.25;
+        outline: none;
+        padding-left: 65px;
+
+        @include adpt ($tab-r) {
+          font-size: 16px;
+          padding-left: 55px;
+        }
+
+        @include adpt ($bmob-r) {
+          font-size: 14px;
+          padding: 11px 10px 10px;
+          padding-left: 45px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 20px;
+          width: 25px;
+          height: 25px;
+          background-image: url('../images/icon/paperclip.svg');
+          background-repeat: no-repeat;
+          background-size: contain;
+
+          @include adpt ($bmob-r) {
+            width: 20px;
+            height: 20px;
+            left: 10px;
+          }
+        }
+
+      }
+    }
+  }
+
+  &__doc-text {
+    font-size: 20px;
+    line-height: 1.25;
+    color: $headers;
+    display: block;
+    margin-bottom: 10px;
+
+    @include adpt ($tab-r) {
+      font-size: 18px;
+      line-height: 1.27;
+    }
+  }
+
+  &__document {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__btns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+
+    @include adpt ($bmob-r) {
+      grid-template-columns: 1fr;
+    }
+
+    & .btn_2 {
+      border: 1px solid $red;
+    }
+  }
+
+  & .popup__check {
+    @include adpt ($tab-r) {
+      margin-bottom: 50px;
+    }
+  }
+}
