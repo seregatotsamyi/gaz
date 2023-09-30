@@ -1,0 +1,52 @@
+.specifications {
+  max-width: 605px;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+
+    @include adpt ($bmob-r) {
+      font-size: 12px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px dashed $yellow;
+    }
+  }
+
+  &__left {
+    color: rgba(102, 102, 102, 0.7);
+    background-color: $bg;
+    position: relative;
+    z-index: 1;
+    padding-right: 10px;
+
+    @include adpt ($bmob-r) {
+      max-width: 174px;
+    }
+  }
+
+  &__right {
+    color: $headers;
+    font-family: $secondFont;
+    font-weight: 500;
+    background-color: $bg;
+    text-align: right;
+    position: relative;
+    z-index: 1;
+    padding-left: 10px;
+    max-width: 34%;
+  }
+}

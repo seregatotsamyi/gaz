@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gaz - product</title>
   <link rel="stylesheet" href="libs/slick.css">
+  <link rel="stylesheet" href="libs/swiper-bundle.min.css">
   <link rel="stylesheet" href="libs/select2.min.css">
+  <link rel="stylesheet" href="libs/fm.revealator.jquery.min.css">
   <link rel="stylesheet" href="libs/slinky.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/page.min.css">
@@ -26,24 +28,7 @@
 
   <main class="main">
 
-    <div class="order-payment">
-      <div class="order-payment__decor _1">
-
-      </div>
-      <div class="order-payment__decor _2">
-
-      </div>
-      <div class="container">
-        <div class="order-payment__inner">
-          <div class="order-payment__text">
-            Рассчитаем заказ и выставим счёт за 15 минут
-          </div>
-          <a class="order-payment__btn btn button popup--link" href="#calculation">
-            Заказать рассчёт
-          </a>
-        </div>
-      </div>
-    </div>
+    @include('components/_order-payment.html')
 
     <div class="breadcrumbs _bg">
       <div class="container">
@@ -83,6 +68,27 @@
     <section class="product">
       <div class="container">
         <div class="product__product">
+          <div class="product__links _mob">
+            <a class="heart _active" href="#">
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path
+                    d="M12.2216 0.269531C10.7706 0.269531 9.40439 0.930307 8.5 2.0534C7.59561 0.930307 6.22934 0.269531 4.77843 0.269531C2.14359 0.269531 0 2.41313 0 5.05012C0.00863281 6.07311 0.213529 7.0702 0.609012 8.0137C1.00449 8.9572 1.5718 9.80235 2.29517 10.5258L8.5 16.7306L14.7048 10.5257C15.4282 9.80238 15.9955 8.9572 16.391 8.01366C16.7865 7.0702 16.9914 6.07311 17 5.04793C17 2.41313 14.8564 0.269531 12.2216 0.269531ZM14.338 10.1589L8.5 15.997L2.66203 10.1589C1.29618 8.79314 0.535035 6.97723 0.518766 5.04793C0.518766 2.69914 2.42964 0.78823 4.77846 0.78823C6.17814 0.78823 7.48956 1.47829 8.28647 2.63413L8.5 2.94384L8.71356 2.63416C9.51054 1.47832 10.822 0.788264 12.2216 0.788264C14.5704 0.788264 16.4813 2.69914 16.4813 5.04573C16.465 6.97723 15.7038 8.79314 14.338 10.1589Z"
+                    fill="#333333"></path>
+                </g>
+
+              </svg>
+
+            </a>
+            <a class="product__link" href="#">
+              <img class="product__link-img" src="images/icon/diagram_eu5wx9ecb1bu 1.svg" width="22" height="21"
+                alt="diagram_eu5wx9ecb1bu 1.svg">
+            </a>
+            <a class="product__link" href="#">
+              <img class="product__link-img" src="images/icon/share_kkt1p5b4haiu 1.svg" alt="share_kkt1p5b4haiu 1.svg"
+                width="22" height="22">
+            </a>
+          </div>
           <div class="product__sliders">
             <div class="product__main-slider-wrap">
               <div class="product__main-slider js-product-main-slider ">
@@ -105,7 +111,7 @@
               <div class="product__second-slider  js-product-second-slider">
 
 
-               
+
                 <div class=" product__second-slide-wrap">
                   <div class="product__second-slide">
                     <img class="product__second-slide-img" src="images/product-item/1.png" alt="d">
@@ -136,7 +142,7 @@
                 </div>
               </div>
 
-              <div class="product__links">
+              <div class="product__links _ds">
                 <a class="heart _active" href="#">
                   <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g>
@@ -186,85 +192,321 @@
                     <span>Гарантия — </span><span>Гарантия</span>
                   </li>
                 </ul>
-                <ul class="product__specifications-sublist">
-                  <li class="product__specifications-item">
-                    <span>Гарантия — </span><span>Гарантия</span>
-                  </li>
-                </ul>
                 <button class="product__specifications-btn js-show-spec" type="button">
                   Все характеристики
                 </button>
               </div>
+              <div class="product__right">
+                <div class="product__price">
+                  10 000 Р
+                </div>
+
+                <div class="product__btn-inner">
+                  <a class="product__btn btn button" href="#">
+                    В корзину
+                  </a>
+                  <div class="product__row">
+                    <a class="product__btn btn btn_2 button" href="#">
+                      Купить в 1 клик
+                    </a>
+                    <a class="product__btn product__btn_q btn btn_2 button popup--link" href="#cons">
+                      ?
+                    </a>
+                  </div>
+                </div>
+                <ul class="product__info-list">
+                  <li class="product__info-item">
+                    <img class="product__info-img" src="images/icon/wallet_z7y5rvdhb0wd 2.svg" alt="product__info"
+                      width="18" height="18">
+                    <a href="#">
+                      Нашли дешевле?
+                    </a>
+                  </li>
+                  <li class="product__info-item">
+                    <img class="product__info-img" src="images/icon/information_gq23mr54t81k 1.svg" alt="product__info"
+                      width="18" height="18">
+                    <span>Продаем оптом и в розницу</span>
+                  </li>
+                  <li class="product__info-item">
+                    <img class="product__info-img" src="images/icon/delivery_truck_g6d4gs5g1mba 1.svg"
+                      alt="product__info" width="18" height="18">
+                    <span>Возможна срочная доставка в день заказа</span>
+                  </li>
+                  <li class="product__info-item">
+                    <img class="product__info-img" src="images/icon/stock_dpbxti61ujsc 1.svg" alt="product__info"
+                      width="18" height="18">
+                    <span>Забрать со склада самовывоза сегодня</span>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+            <div class="product__additionally">
+              <div class="product__additionally-title">
+                Дополнительно к товару
+              </div>
+              <ul class="product__additionally-list">
+                <li class="product__additionally-item">
+                  <img class="product__additionally-img" src="images/product-item/1.png" alt="product-item">
+                  <a class="product__additionally-name text" href="#">
+                    Аргоновый баллон новый 40л
+                  </a>
+                  <div class="product__additionally-price">
+                    10 000 Р
+                  </div>
+                  <a class="product__additionally-btn btn button" href="#">
+                    В корзину
+                  </a>
+                </li>
+                <li class="product__additionally-item">
+                  <img class="product__additionally-img" src="images/product-item/1.png" alt="product-item">
+                  <a class="product__additionally-name text" href="#">
+                    Аргоновый баллон новый 40л
+                  </a>
+                  <div class="product__additionally-price">
+                    от 10 000 Р до 20 000 Р
+                  </div>
+                  <a class="product__additionally-btn btn button" href="#">
+                    В корзину
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="info product__info-block">
+              <div class="info__inner">
+                <div class="info__text ">
+                  Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах
+                </div>
+              </div>
             </div>
 
           </div>
 
+        </div>
+        <div class="product__tabs" id="tabs">
+          <div class="product__tabs-top-wrap">
+            <div class="product__tabs-top">
+              <a class="product__tabs-link _active" href="#product-tabs-box-1">
+                Характеристики
+              </a>
+              <a class="product__tabs-link" href="#product-tabs-box-2">
+                Описание
+              </a>
+              <a class="product__tabs-link" href="#product-tabs-box-4">
+                Как купить
+              </a>
+              <a class="product__tabs-link" href="#product-tabs-box-5">
+                Оплата
+              </a>
+              <a class="product__tabs-link" href="#product-tabs-box-6">
+                Доставка
+              </a>
+              <a class="product__tabs-link" href="#product-tabs-box-3">
+                Отзывы
+              </a>
+            </div>
+          </div>
+
+          <div class="product__tabs-box-inner">
+            <div class="product__tabs-box _active" id="product-tabs-box-1">
+              <div class="product__tabs-title title">
+                Характеристики
+              </div>
+              <div class="specifications">
+                <ul class="specifications__list">
+                  <li class="specifications__item text">
+                    <div class="specifications__left">
+                      Рабочее давление, МПа
+                    </div>
+                    <div class="specifications__right">
+                      14,7
+                    </div>
+                  </li>
+                  <li class="specifications__item text">
+                    <div class="specifications__left">
+                      Диаметр, мм
+                    </div>
+                    <div class="specifications__right">
+                      219
+                    </div>
+                  </li>
+                  <li class="specifications__item text">
+                    <div class="specifications__left">
+                      Высота, мм
+                    </div>
+                    <div class="specifications__right">
+                      1400
+                    </div>
+                  </li>
+                  <li class="specifications__item text">
+                    <div class="specifications__left">
+                      Материал
+                    </div>
+                    <div class="specifications__right">
+                      Сталь 45Д
+                    </div>
+                  </li>
+                  <li class="specifications__item text">
+                    <div class="specifications__left">
+                      Тип зарядного устройства
+                    </div>
+                    <div class="specifications__right">
+                      Вентиль ГОСТ 9909-81
+                    </div>
+                  </li>
+                  <li class="specifications__item text">
+                    <div class="specifications__left">
+                      Объём газа, м3
+                    </div>
+                    <div class="specifications__right">
+                      6,3
+                    </div>
+                  </li>
+                  <li class="specifications__item text">
+                    <div class="specifications__left">
+                      Вес газа, кг
+                    </div>
+                    <div class="specifications__right">
+                      7,5
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="product__tabs-box" id="product-tabs-box-2">
+              2
+            </div>
+            <div class="product__tabs-box" id="product-tabs-box-3">
+              <ul class="reviews-page__list">
+                <li class="reviews-page__item">
+                  <div class="reviews__slide">
+                    <div class="reviews__top">
+                      <div class="reviews__info">
+                        <div class="reviews__from">
+                          Отзыв с Яндекс карт
+                        </div>
+                        <div class="reviews__author">
+                          Кира Михеева
+                        </div>
+                        <img class="reviews__stars" src="images/icon/stars.svg" alt="stars" width="85" height="17">
+                      </div>
+                      <div class="reviews__img-wrap">
+                        <img class="reviews__img" src="images/reviews/avatar.jpg" alt="reviews" width="80" height="80">
+                      </div>
+                    </div>
+                    <div class="reviews__text text">
+                      Хорошая компания по доставке газа. Все основные технические газы имеются!! По возможности стараются
+                      доставить газы многие в день заказа. Вежливые водители!!!!
+                    </div>
+                  </div>
+  
+                </li>
+                <li class="reviews-page__item">
+                  <div class="reviews__slide">
+                    <div class="reviews__top">
+                      <div class="reviews__info">
+                        <div class="reviews__from">
+                          Отзыв с Яндекс карт
+                        </div>
+                        <div class="reviews__author">
+                          Кира Михеева
+                        </div>
+                        <img class="reviews__stars" src="images/icon/stars.svg" alt="stars" width="85" height="17">
+                      </div>
+                      <div class="reviews__img-wrap">
+                        <img class="reviews__img" src="images/reviews/avatar.jpg" alt="reviews" width="80" height="80">
+                      </div>
+                    </div>
+                    <div class="reviews__text text">
+                      Хорошая компания по доставке газа. Все основные технические газы имеются!! По возможности стараются
+                      доставить газы многие в день заказа. Вежливые водители!!!!
+                    </div>
+                  </div>
+  
+                </li>
+                <li class="reviews-page__item">
+                  <div class="reviews__slide">
+                    <div class="reviews__top">
+                      <div class="reviews__info">
+                        <div class="reviews__from">
+                          Отзыв с Яндекс карт
+                        </div>
+                        <div class="reviews__author">
+                          Кира Михеева
+                        </div>
+                        <img class="reviews__stars" src="images/icon/stars.svg" alt="stars" width="85" height="17">
+                      </div>
+                      <div class="reviews__img-wrap">
+                        <img class="reviews__img" src="images/reviews/avatar.jpg" alt="reviews" width="80" height="80">
+                      </div>
+                    </div>
+                    <div class="reviews__text text">
+                      Хорошая компания по доставке газа. Все основные технические газы имеются!! По возможности стараются
+                      доставить газы многие в день заказа. Вежливые водители!!!!
+                    </div>
+                  </div>
+  
+                </li>
+              </ul>
+            </div>
+            <div class="product__tabs-box" id="product-tabs-box-4">
+              <div class="product__tabs-title title">
+                Как купить
+              </div>
+              <div class="table">
+                <table>
+                  <thead>
+                    <tr>
+                      <td>Lorem ipsum</td>
+                      <td>Lorem ipsum</td>
+                      <td>Lorem ipsum</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet</td>
+                      <td>Lorem ipsum dolor sit ametns</td>
+                      <td>Lorem ipsum dolor sit ametns</td>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet</td>
+                      <td>Lorem ipsum dolor sit ametns</td>
+                      <td>Lorem ipsum dolor sit ametns</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="product__tabs-info-wrap">
+                <div class="info _red">
+                  <div class="info__inner">
+                    <div class="info__text ">
+                      Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах
+                    </div>
+                  </div>
+                </div>
+                <div class="info _green">
+                  <div class="info__inner">
+                    <div class="info__text ">
+                      Цена действительна только для интернет-магазина и может отличаться от цен в розничных магазинах
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="product__tabs-box" id="product-tabs-box-5">
+              5
+            </div>
+            <div class="product__tabs-box" id="product-tabs-box-6">
+              6
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
 
-    <section class="recommendation">
-      <div class="container">
-        <div class="recommendation__title title">
-          Рекомендуем ознакомиться
-        </div>
-        <div class="recommendation__slider swiper js-recommendation-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide recommendation__slide-wrap">
-              <div class="recommendation__slide">
-                <a class="recommendation__link" href="#">
-                  Подробнее
-                </a>
-                <div class="recommendation__content">
-                  <div class="recommendation__subtitle">
-                    Баллоны высокго давления
-                  </div>
-                  <div class="recommendation__text">
-                    Облегченные импортные баллоны от 150 до 200 атм. В 2 раза больше газа в 1 баллоне
-                  </div>
-                </div>
-                <div class="recommendation__img-wrap">
-                  <img class="recommendation__img" src="images/recommendation/1.png" alt="recommendation" width="106"
-                    height="271">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide recommendation__slide-wrap">
-              <div class="recommendation__slide">
-                <a class="recommendation__link" href="#">
-                  Подробнее
-                </a>
-                <div class="recommendation__content">
-                  <div class="recommendation__subtitle">
-                    Газификаторы 200 л
-                  </div>
-                  <div class="recommendation__text">
-                    Криогенный холодный газификатор 200л заменяет до 27 баллонов по 40 литров
-                  </div>
-                </div>
-                <div class="recommendation__img-wrap">
-                  <img class="recommendation__img" src="images/recommendation/2.png" alt="recommendation" width="127"
-                    height="298">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="recommendation__arrow slider-arrow recommendation__arrow_prev">
-            <svg class="recommendation__arrow-icon" width="8" height="15" viewBox="0 0 8 15" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 1L1 7.74074L7 14" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="recommendation__arrow recommendation__arrow_next slider-arrow slider-arrow_next">
-            <svg class="recommendation__arrow-icon" width="8" height="15" viewBox="0 0 8 15" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 1L1 7.74074L7 14" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
+    @include('components/_recommendation.html')
 
 
     <section class="catalog-promo">
@@ -577,30 +819,7 @@
 
     @include('components/_contacts.html')
 
-    <div class="order-payment _2">
-      <div class="order-payment__decor _1">
-
-      </div>
-      <div class="order-payment__decor _2">
-
-      </div>
-      <div class="container">
-        <div class="order-payment__inner">
-          <div class="order-payment__text">
-            Следите за нами в телеграм:
-          </div>
-          <div class="order-payment__btns">
-            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
-              Наш канал
-            </a>
-            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
-              Бот-помощник
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    @include('components/_order-payment-2.html')
 
   </main>
 
@@ -610,92 +829,13 @@
   @include('components/_popup.html')
   @include('components/_popup-cons.html')
   @include('components/_popup-calculation.html')
-  <script>
-    window.addEventListener('load', function () {
-      let myMap;
-      ymaps.ready(function () {
-        myMap = new ymaps.Map("map", {
-          center: [55.698112, 37.708410],
-          zoom: 10
-        });
-        let createMark = (coordinates, iconCaption, balloonContent) => {
-          myMap.geoObjects.add(new ymaps.Placemark(coordinates, {
-            iconCaption: iconCaption,
-            balloonContent: balloonContent
-          }, {
-            preset: 'islands#yellowFuelStationIcon'
-          }))
-        }
+  @include('components/_script-contact.html')
 
-        let zoomMark = (coordinates) => {
-          myMap.setCenter(coordinates, 14, {
-            checkZoomRange: true
-          });
-        }
-
-        $('.js-contact-btn').each((i, e) => {
-          const stringOfCoordinates = $(e).attr('data-coordinates')
-          const iconCaption = $(e).attr('data-text')
-          const balloonContent = $(e).attr('data-bullun')
-          const coordinates = JSON.parse(stringOfCoordinates);
-          createMark(coordinates, iconCaption, balloonContent)
-        })
-        //spoiler-contact
-        $(document).on('click', '.js-contact-btn', function (e) {
-          e.preventDefault()
-
-          if ($(this).hasClass('_active')) {
-            $(this).removeClass("_active")
-            $(this).parents('.contacts__slide').toggleClass("_active").find('.contacts__bottom-wrap').slideToggle();
-            const coordinates = JSON.parse($(this).attr('data-coordinates'))
-            zoomMark(coordinates)
-
-          } else {
-            $('.js-contact-btn').removeClass('_active')
-            $(this).addClass("_active")
-            $('.js-contact-btn').parents('.contacts__slide').removeClass("_active").find('.contacts__bottom-wrap').slideUp();
-            $(this).parents('.contacts__slide').addClass("_active").find('.contacts__bottom-wrap').slideDown();
-            const coordinates = JSON.parse($(this).attr('data-coordinates'))
-            zoomMark(coordinates)
-          }
-        })
-        //spoiler-contact
-
-        //contact-list
-
-        const contactListWrap = $('.contacts__list-wrap')
-        const contactList = $('.contacts__list')
-        let scrollPos = contactList.position().top;
-        contactListWrap.on("scroll", function () {
-          scrollPos = contactList.position().top;
-        });
-
-        $(document).on('click', '.contacts__arrow_prev', function (e) {
-          scrollPos = contactList.position().top;
-          scrollPos = scrollPos + 100
-          contactListWrap.animate({
-            scrollTop: ((-1) * scrollPos)
-          });
-        })
-        $(document).on('click', '.contacts__arrow_next', function (e) {
-          scrollPos = contactList.position().top;
-          scrollPos = scrollPos - 100
-          contactListWrap.animate({
-            scrollTop: ((-1) * scrollPos)
-          });
-        })
-        //contact-list
-
-      })
-
-
-
-    })
-  </script>
   <script src="libs/swiper-bundle.min.js"></script>
   <script src="libs/jquery.min.js"></script>
   <script src="libs/slick.min.js"></script>
   <script src="libs/select2.full.min.js"></script>
+  <script src="libs/fm.revealator.jquery.js"></script>
   <script src="libs/slinky.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>

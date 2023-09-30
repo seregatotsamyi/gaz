@@ -61,6 +61,12 @@
   }
 
 
+  &__nav-img-wrap {
+    position: relative;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+
   &__nav-link-wrap {
     &._sublist:hover {
       & .header__nav-dropdown {
@@ -160,6 +166,10 @@
       & span {
         color: $yellow;
       }
+
+      & img {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -167,7 +177,8 @@
     width: 90px;
     height: 103px;
     object-fit: cover;
-    margin-right: 20px;
+
+    transition: transform 0.5s;
   }
 
   &__nav-subtext {

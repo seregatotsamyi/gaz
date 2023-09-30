@@ -27,11 +27,18 @@
     }
   }
 
+  &__img-wrap {
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
   &__img {
     width: 60px;
     height: 60px;
     object-fit: cover;
-    border-radius: 50%;
+    transition: transform 0.3s;
+
 
     @include adpt ($bmob-r) {
       width: 50px;
@@ -58,6 +65,9 @@
 
       & .catalog-cat__text {
         color: $red;
+      }
+      & .catalog-cat__img{
+        transform: scale(1.1);
       }
     }
   }

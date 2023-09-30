@@ -138,12 +138,30 @@ $(function () {
   const wrapHeaderLeft = $('#_in-mark')
   const phoneBlockDropdown = $('.phone-block-dropdown')
 
-  openAboutEmailBtn.on('click', openAboutEmail)
+  const openFixAboutEmailBtn = $('.js-open-fix-about-email')
+  const phoneFixBlockDropdown = $('.phone-block-dropdown-fix')
+
+  openFixAboutEmailBtn.on('click', toggleAboutFixEmail)
+
+  openAboutEmailBtn.on('mouseenter', openAboutEmail)
+  openAboutEmailBtn.on('click', toggleAboutEmail)
+  phoneBlockDropdown.on('mouseleave', toggleAboutEmail)
 
   function openAboutEmail() {
+    wrapHeaderLeft.addClass('_active')
+    phoneBlockDropdown.addClass('_active')
+    openAboutEmailBtn.addClass('_active')
+  }
+
+  function toggleAboutEmail() {
     wrapHeaderLeft.toggleClass('_active')
     phoneBlockDropdown.toggleClass('_active')
     openAboutEmailBtn.toggleClass('_active')
+  }
+
+  function toggleAboutFixEmail() {
+    phoneFixBlockDropdown.toggleClass('_active')
+    openFixAboutEmailBtn.toggleClass('_active')
   }
 
   //js-open-about-email
@@ -237,6 +255,11 @@ $(function () {
   //promo-slider
   const promoSlider = new Swiper('.js-promo-slider', {
     loop: true,
+    //effect: 'coverflow',
+
+    autoplay: {
+      delay: 6000,
+    },
     navigation: {
       nextEl: '.promo-slider__arrow_next',
       prevEl: '.promo-slider__arrow_prev',
@@ -356,6 +379,9 @@ $(function () {
     slidesPerView: 1,
     spaceBetween: 0,
     autoHeight: true,
+    autoplay: {
+      delay: 6000,
+    },
     breakpoints: {
       769: {
         slidesPerView: 2,
@@ -483,27 +509,51 @@ $(function () {
 
 
   //product
-  $('.js-product-main-slider').slick({
-    arrows: false,
-    asNavFor: '.js-product-second-slider',
-    //fade: true,
-    swipe: false,
-  })
-  $('.js-product-second-slider').slick({
-    arrows: false,
-    asNavFor: '.js-product-main-slider',
-    slidesToShow: 6,
-    focusOnSelect: true,
-    swipeToSlide: true,
-    swipe: true,
-    draggable: true,
-  })
+  if ($('.js-product-main-slider').length) {
+    $('.js-product-main-slider').slick({
+      arrows: false,
+      asNavFor: '.js-product-second-slider',
+      //fade: true,
+      swipe: false,
+    })
+    $('.js-product-second-slider').slick({
+      arrows: false,
+      asNavFor: '.js-product-main-slider',
+      slidesToShow: 6,
+      focusOnSelect: true,
+      swipeToSlide: true,
+      swipe: true,
+      draggable: true,
+      responsive: [{
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 3,
+          vertical: true,
+        }
+      }]
+    })
+  }
+
 
   $(document).on('click', '.js-show-spec', function (e) {
     e.preventDefault()
-    $(this).toggleClass('_open')
-    $(this).parents('.product__specifications').find('.product__specifications-sublist').slideToggle();
+    $("html, body").animate({
+      scrollTop: $('#tabs').offset().top - 70
+    }, {
+      duration: 370, // по умолчанию «400»
+      easing: "linear" // по умолчанию «swing»
+    });
   })
+
+
+  $('.product__tabs-link').on('click', function (e) {
+    e.preventDefault();
+    $('.product__tabs-link').removeClass('_active');
+    $(this).addClass('_active');
+
+    $('.product__tabs-box').removeClass('_active');
+    $($(this).attr('href')).addClass('_active');
+  });
 
   //product
 
@@ -512,11 +562,24 @@ $(function () {
   //click outside
 
   $(document).mouseup(function (e) {
+
+
+    const openFixAboutEmailBtn = $('.js-open-fix-about-email')
+    const phoneFixBlockDropdown = $('.phone-block-dropdown-fix')
+
     if (!openAboutEmailBtn.is(e.target) &&
       openAboutEmailBtn.has(e.target).length === 0 && !phoneBlockDropdown.is(e.target) &&
       phoneBlockDropdown.has(e.target).length === 0) {
       if (phoneBlockDropdown.hasClass('_active')) {
-        openAboutEmail()
+        toggleAboutEmail()
+      }
+    }
+
+    if (!openFixAboutEmailBtn.is(e.target) &&
+      openFixAboutEmailBtn.has(e.target).length === 0 && !phoneFixBlockDropdown.is(e.target) &&
+      phoneFixBlockDropdown.has(e.target).length === 0) {
+      if (phoneFixBlockDropdown.hasClass('_active')) {
+        toggleAboutFixEmail()
       }
     }
 

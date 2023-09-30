@@ -1,4 +1,24 @@
 .info {
+  &._red {
+    & .info__inner {
+      background-color: $red;
+    }
+
+    & .info__text {
+      color: $white;
+    }
+  }
+
+  &._green {
+    & .info__inner {
+      background-color: #69BE14;
+    }
+
+    & .info__text {
+      color: $white;
+    }
+  }
+
   &__inner {
     position: relative;
     border-radius: 6px;

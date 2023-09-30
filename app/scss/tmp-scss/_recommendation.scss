@@ -30,7 +30,8 @@
     }
 
     & .recommendation__link {
-      left: 25px;
+      left: 50%;
+      transform: translateX(-50%);
       bottom: 20px;
     }
 
@@ -71,6 +72,7 @@
     padding: 45px 30px;
     height: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     transition: box-shadow 0.3s;
 
@@ -105,10 +107,10 @@
   }
 
   &__content {
-    padding-top: 55px;
+    // padding-top: 55px;
 
     @include adpt ($tab-r) {
-      padding-top: 30px;
+      // padding-top: 30px;
       max-width: 300px;
       margin-right: 10px;
       flex: 1;
@@ -131,7 +133,7 @@
     bottom: 30px;
     left: 30px;
     padding-left: 29px;
-    color: $red;
+    color: $yellow;
 
     @include adpt ($tab-r) {
       left: 25px;
@@ -142,20 +144,24 @@
     }
 
     &:hover {
-      color: $yellow;
+      color: $red;
+
+      & svg path {
+        fill: $red;
+      }
     }
 
-    &::before {
-      content: "";
+    & svg path {
+      transition: all 0.3s;
+    }
+
+    & svg {
       position: absolute;
       top: 50%;
       left: 0;
       transform: translateY(-50%);
       width: 17px;
       height: 21px;
-      background-image: url('../images/icon/fire.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
     }
   }
 

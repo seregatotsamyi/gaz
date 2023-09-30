@@ -3,6 +3,16 @@
   border-bottom: 1px solid $grey;
   padding: 30px 0 65px;
 
+  @include adpt ($bmob-r) {
+    padding: 30px 0;
+  }
+
+  & .container {
+    @include adpt ($bmob-r) {
+      padding: 0;
+    }
+  }
+
   &__title-wrap {
     background-color: $bg;
   }
@@ -14,6 +24,36 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include adpt ($stab-r) {
+      flex-direction: column;
+    }
+
+    @include adpt ($bmob-r) {
+      padding: 15px 20px 30px;
+    }
+  }
+
+  &__main-slider-wrap {
+    @include adpt ($bmob-r) {
+      min-width: 0;
+    }
+  }
+
+  &__second-slider-wrap {
+    @include adpt ($bmob-r) {
+      min-width: 0;
+      width: 45px;
+      margin-left: 5px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__second-slider {
+    @include adpt ($bmob-r) {
+      height: 376px;
+
+    }
   }
 
   &__sliders {
@@ -21,10 +61,34 @@
     max-width: 564px;
     flex: 1;
     margin-right: 30px;
+
+    @include adpt ($stab-r) {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: 100%;
+    }
+
+    @include adpt ($bmob-r) {
+      display: flex;
+      height: 376px;
+    }
   }
 
   &__content {
     flex: 1;
+
+    @include adpt ($tab-r) {
+      max-width: 400px;
+    }
+
+    @include adpt ($stab-r) {
+      max-width: 100%;
+    }
+
+    @include adpt ($bmob-r) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__content-top {
@@ -32,12 +96,20 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 10px;
+    }
   }
 
   &__content-top-left {
     margin-right: 20px;
     display: flex;
     align-items: center;
+
+    @include adpt ($bmob-r) {
+      margin-right: 0;
+    }
   }
 
   &__art {
@@ -84,9 +156,28 @@
     grid-gap: 25px;
     align-items: center;
 
+    @include adpt ($bmob-r) {
+      margin-bottom: 17px;
+      margin-left: auto;
+    }
+
     & .heart {
       display: flex;
       align-items: center;
+    }
+
+    &._mob {
+      display: none;
+
+      @include adpt ($bmob-r) {
+        display: flex;
+      }
+    }
+
+    &._ds {
+      @include adpt ($bmob-r) {
+        display: none;
+      }
     }
   }
 
@@ -95,6 +186,15 @@
     color: rgba(102, 102, 102, 0.8);
     position: relative;
     margin-bottom: 50px;
+
+    @include adpt ($tab-r) {
+      margin-bottom: 30px;
+    }
+
+    @include adpt ($bmob-r) {
+      order: -1;
+      margin-bottom: 5px;
+    }
 
     &::after {
       content: "";
@@ -113,6 +213,10 @@
     margin-bottom: 20px;
     border-radius: 6px;
     border: 1px solid $grey;
+
+    @include adpt ($bmob-r) {
+      margin-bottom: 0;
+    }
   }
 
   &__main-slide-img {
@@ -127,6 +231,11 @@
     align-items: center;
     width: 100%;
     min-height: 564px;
+
+    @include adpt ($bmob-r) {
+      min-height: auto;
+      height: 376px;
+    }
   }
 
   &__second-slider {
@@ -138,6 +247,11 @@
       display: flex;
       margin-left: 0;
       margin: 0 -10px;
+
+      @include adpt ($bmob-r) {
+        flex-direction: column;
+        margin: -4px 0;
+      }
     }
   }
 
@@ -152,11 +266,19 @@
     border-radius: 6px;
     border: 1px solid $grey;
     transition: border-color 0.3s;
+
+    @include adpt ($bmob-r) {
+      aspect-ratio: 45/60;
+    }
   }
 
   &__second-slide-wrap {
     padding: 0 10px;
     box-sizing: border-box;
+
+    @include adpt ($bmob-r) {
+      padding: 4px 0;
+    }
 
     &.slick-current {
       & .product__second-slide {
@@ -177,12 +299,20 @@
     color: $headers;
     line-height: 1.25;
     margin-bottom: 20px;
+
+    @include adpt ($tab-r) {
+      font-size: 18px;
+    }
   }
 
   &__specifications-item {
     font-size: 16px;
     line-height: 1.25;
     opacity: 0.8;
+
+    @include adpt ($tab-r) {
+      font-size: 14px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 10px;
@@ -207,6 +337,11 @@
     position: relative;
     margin-top: 35px;
 
+    @include adpt ($bmob-r) {
+      font-size: 14px;
+      margin-top: 25px;
+    }
+
     &._open {
       &::after {
         transform: rotate(180deg) translateY(-50%);
@@ -225,6 +360,275 @@
       background-repeat: no-repeat;
       background-size: contain;
       transition: transform 0.3s;
+    }
+  }
+
+  &__right {
+    @include adpt ($tab-r) {
+      order: -1;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+    @include adpt ($tab-r) {
+      grid-template-columns: 1fr;
+    }
+
+    @include adpt ($bmob-r) {
+      grid-gap: 30px;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 500;
+    color: $headers;
+    font-family: $secondFont;
+    margin-bottom: 15px;
+  }
+
+  &__btn-inner {
+    margin-bottom: 20px;
+
+    & .btn_2 {
+      border: 1px solid $red;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    display: block;
+  }
+
+  &__row {
+    display: flex;
+    margin-top: 10px;
+
+    & .product__btn {
+      flex: 1;
+    }
+
+    & .product__btn_q {
+      max-width: 41px;
+      margin-left: 10px;
+      padding: 10px;
+    }
+  }
+
+  &__info-item {
+    display: flex;
+    align-items: flex-start;
+    color: rgba(102, 102, 102, 0.8);
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    & a {
+      text-decoration: underline;
+
+    }
+  }
+
+  &__info-img {
+    object-fit: contain;
+    margin-right: 10px;
+  }
+
+  &__additionally {
+    margin-top: 35px;
+
+    @include adpt ($bmob-r) {
+      display: none;
+    }
+  }
+
+  &__additionally-name{
+    &:hover{
+      color: $yellow;
+    }
+  }
+  &__additionally-title {
+    font-size: 20px;
+    line-height: 1.25;
+    opacity: 0.8;
+    color: $headers;
+    margin-bottom: 15px;
+  }
+
+  &__additionally-list {
+    border: 1px solid $grey;
+  }
+
+  &__additionally-item {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 70px 1fr 89px 135px;
+    grid-gap: 18px;
+    align-items: center;
+    transition: box-shadow 0.3s;
+    &:hover{
+      box-shadow:  0 0 10px rgba(102, 102, 102, 0.14);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey;
+    }
+  }
+
+  &__additionally-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  &__additionally-price {
+    color: $headers;
+    font-weight: 500;
+    font-size: 16px;
+    opacity: 0.8;
+    text-align: right;
+    line-height: 1.25;
+    font-family: $secondFont;
+  }
+
+  &__info-block {
+    margin-top: 40px;
+
+    & .info__text {
+      font-size: 14px;
+      max-width: 450px;
+
+      @include adpt ($bmob-r) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__tabs {
+    margin-top: 20px;
+
+    @include adpt ($bmob-r) {
+      padding: 30px 20px 0;
+      margin: 0;
+    }
+
+    & .info__text {
+      font-size: 16px;
+
+      @include adpt ($tab-r) {
+        font-size: 14px;
+      }
+
+      @include adpt ($bmob-r) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__tabs-top-wrap {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #D9D9D9;
+    }
+  }
+
+  &__tabs-link {
+    font-family: $secondFont;
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 500;
+    color: $headers;
+    position: relative;
+    padding: 0 17px 12px;
+    white-space: nowrap;
+
+    @include adpt ($bmob-r) {
+      padding: 0 9px 4px;
+    }
+
+    &:hover {
+      color: $yellow;
+    }
+
+    &._active {
+      color: $yellow;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 20px;
+      opacity: 0;
+      background-color: $yellow;
+      transition: opacity 0.3s;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $grey;
+    }
+  }
+
+  &__tabs-top {
+    display: flex;
+    width: 100%;
+  }
+
+  &__tabs-box {
+    display: none;
+
+    &._active {
+      display: block;
+    }
+  }
+
+  &__tabs-box-inner {
+    margin-top: 60px;
+
+    @include adpt ($stab-r) {
+      margin-top: 50px;
+    }
+  }
+
+  &__tabs-title {
+    margin-bottom: 30px;
+  }
+
+  &__tabs-info-wrap {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 28px;
+
+    @include adpt ($stab-r) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
     }
   }
 }

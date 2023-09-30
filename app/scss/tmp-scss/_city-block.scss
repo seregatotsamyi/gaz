@@ -3,7 +3,7 @@
   padding: 15px 0;
   height: auto;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   transition: background-color 0.3s;
 
   @include adpt ($desmr-r) {
@@ -16,6 +16,7 @@
 
   @include adpt ($bmob-r) {
     width: auto;
+    padding: 12px 0;
   }
 
   &._active {

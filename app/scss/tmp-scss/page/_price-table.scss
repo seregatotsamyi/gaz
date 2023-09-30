@@ -34,9 +34,6 @@
       border-bottom: 1px solid $grey;
     }
 
-    &._active {
-      color: $yellow;
-    }
   }
 
   &__price {
@@ -52,6 +49,10 @@
     margin-right: 30px;
     padding-left: 40px;
     position: relative;
+
+    &:hover {
+      color: $yellow;
+    }
 
     &::after {
       content: "";

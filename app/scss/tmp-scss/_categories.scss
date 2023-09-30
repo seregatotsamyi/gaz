@@ -130,6 +130,7 @@
     display: grid;
     grid-template-columns: 1fr 140px;
     grid-gap: 40px;
+    align-items: flex-start;
 
     @include adpt ($desm-r) {
       grid-template-columns: 1fr 120px;
@@ -169,6 +170,10 @@
     }
   }
 
+  &__img-wrap{
+    position: relative;
+    overflow: hidden;
+  }
   &__img {
     width: 140px;
     height: 187px;

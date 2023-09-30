@@ -70,6 +70,10 @@
           stop-color: $red;
         }
       }
+
+      & .services__slide-img {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -87,17 +91,25 @@
     }
   }
 
-  &__slide-img {
-    aspect-ratio: 16/13;
-    width: 100%;
-    height: auto;
-    border-radius: 3px;
+  &__slide-img-wrap {
+    position: relative;
+    overflow: hidden;
     margin-bottom: 25px;
     max-width: 160px;
+    border-radius: 3px;
+   
 
     @include adpt ($bmob-r) {
       margin-bottom: 18px;
     }
+  }
+
+  &__slide-img {
+    aspect-ratio: 16/13;
+    width: 100%;
+    height: auto;
+    max-width: 160px;
+    transition: transform 0.4s;
   }
 
   &__slide-title {
@@ -110,6 +122,11 @@
 
     @include adpt ($bmob-r) {
       font-size: 18px;
+    }
+
+    &:hover {
+      color: $red;
+      text-decoration: underline;
     }
   }
 

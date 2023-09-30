@@ -8,6 +8,7 @@
   <title>Gaz - catalog</title>
   <link rel="stylesheet" href="libs/swiper-bundle.min.css">
   <link rel="stylesheet" href="libs/select2.min.css">
+  <link rel="stylesheet" href="libs/fm.revealator.jquery.min.css">
   <link rel="stylesheet" href="libs/slinky.min.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="stylesheet" href="css/page.min.css">
@@ -78,12 +79,13 @@
 
     <section class="catalog">
       <div class="container">
-        <span class="categories-span _show">
-          Купить аргон в баллоне. Обмен заправленного баллона на пустой
-        </span>
+        
         <div class="catalog__title title">
           Заправка баллонов аргоном
         </div>
+        <span class="categories-span _show">
+          Купить аргон в баллоне. Обмен заправленного баллона на пустой
+        </span>
         <div class="catalog__inner page">
           <div class="catalog__left page__left">
             <div class="catalog__wrap">
@@ -287,12 +289,13 @@
 
               </div>
             </div>
-            <span class="categories-span _show">
-              Купить аргоновые баллоны. Новая и оборотная тара
-            </span>
+         
             <div class="catalog__title _first title">
               Аргоновые баллоны (новые и оборотные)
             </div>
+            <span class="categories-span _show">
+              Купить аргоновые баллоны. Новая и оборотная тара
+            </span>
             <div class="catalog__wrap">
               <div class="product-item catalog__item">
                 <div class="product-item__wrap">
@@ -776,199 +779,19 @@
 
     @include('components/_contacts.html')
 
-    <section class="recommendation">
-      <div class="container">
-        <div class="recommendation__title title">
-          Рекомендуем ознакомиться
-        </div>
-        <div class="recommendation__slider swiper js-recommendation-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide recommendation__slide-wrap">
-              <div class="recommendation__slide">
-                <a class="recommendation__link" href="#">
-                  Подробнее
-                </a>
-                <div class="recommendation__content">
-                  <div class="recommendation__subtitle">
-                    Баллоны высокго давления
-                  </div>
-                  <div class="recommendation__text">
-                    Облегченные импортные баллоны от 150 до 200 атм. В 2 раза больше газа в 1 баллоне
-                  </div>
-                </div>
-                <div class="recommendation__img-wrap">
-                  <img class="recommendation__img" src="images/recommendation/1.png" alt="recommendation" width="106"
-                    height="271">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide recommendation__slide-wrap">
-              <div class="recommendation__slide">
-                <a class="recommendation__link" href="#">
-                  Подробнее
-                </a>
-                <div class="recommendation__content">
-                  <div class="recommendation__subtitle">
-                    Газификаторы 200 л
-                  </div>
-                  <div class="recommendation__text">
-                    Криогенный холодный газификатор 200л заменяет до 27 баллонов по 40 литров
-                  </div>
-                </div>
-                <div class="recommendation__img-wrap">
-                  <img class="recommendation__img" src="images/recommendation/2.png" alt="recommendation" width="127"
-                    height="298">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="recommendation__arrow slider-arrow recommendation__arrow_prev">
-            <svg class="recommendation__arrow-icon" width="8" height="15" viewBox="0 0 8 15" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 1L1 7.74074L7 14" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-          <div class="recommendation__arrow recommendation__arrow_next slider-arrow slider-arrow_next">
-            <svg class="recommendation__arrow-icon" width="8" height="15" viewBox="0 0 8 15" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M7 1L1 7.74074L7 14" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-        </div>
-      </div>
-    </section>
+    @include('components/_recommendation.html')
 
-    <section class="prcatalog">
-
-      <div class="prcatalog__inner">
-        <div class="prcatalog__title">
-          Более 500 предприятиям ежемесячно поставляем технический газ и баллоны
-        </div>
-        <div class="prcatalog__content">
-          <div class="prcatalog__text">
-            Принимаем заказы от юридических и физических лиц
-          </div>
-          <a class="prcatalog__btn btn button" href="#">
-            Каталог газов
-          </a>
-        </div>
-      </div>
-
-    </section>
+    @include('components/_prcatalog.html')
 
     @include('components/_questions.html')
 
-    <div class="order-payment _2">
-      <div class="order-payment__decor _1">
-
-      </div>
-      <div class="order-payment__decor _2">
-
-      </div>
-      <div class="container">
-        <div class="order-payment__inner">
-          <div class="order-payment__text">
-            Следите за нами в телеграм:
-          </div>
-          <div class="order-payment__btns">
-            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
-              Наш канал
-            </a>
-            <a class="order-payment__btn btn btn_3 button popup--link" href="#">
-              Бот-помощник
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </div>
+    @include('components/_order-payment-2.html')
 
   </main>
 
   @include('components/_footer.html')
 
-  <script>
-    window.addEventListener('load', function () {
-      let myMap;
-      ymaps.ready(function () {
-        myMap = new ymaps.Map("map", {
-          center: [55.698112, 37.708410],
-          zoom: 10
-        });
-        let createMark = (coordinates, iconCaption, balloonContent) => {
-          myMap.geoObjects.add(new ymaps.Placemark(coordinates, {
-            iconCaption: iconCaption,
-            balloonContent: balloonContent
-          }, {
-            preset: 'islands#yellowFuelStationIcon'
-          }))
-        }
-
-        let zoomMark = (coordinates) => {
-          myMap.setCenter(coordinates, 14, {
-            checkZoomRange: true
-          });
-        }
-
-        $('.js-contact-btn').each((i, e) => {
-          const stringOfCoordinates = $(e).attr('data-coordinates')
-          const iconCaption = $(e).attr('data-text')
-          const balloonContent = $(e).attr('data-bullun')
-          const coordinates = JSON.parse(stringOfCoordinates);
-          createMark(coordinates, iconCaption, balloonContent)
-        })
-        //spoiler-contact
-        $(document).on('click', '.js-contact-btn', function (e) {
-          e.preventDefault()
-
-          if ($(this).hasClass('_active')) {
-            $(this).removeClass("_active")
-            $(this).parents('.contacts__slide').toggleClass("_active").find('.contacts__bottom-wrap').slideToggle();
-            const coordinates = JSON.parse($(this).attr('data-coordinates'))
-            zoomMark(coordinates)
-
-          } else {
-            $('.js-contact-btn').removeClass('_active')
-            $(this).addClass("_active")
-            $('.js-contact-btn').parents('.contacts__slide').removeClass("_active").find('.contacts__bottom-wrap').slideUp();
-            $(this).parents('.contacts__slide').addClass("_active").find('.contacts__bottom-wrap').slideDown();
-            const coordinates = JSON.parse($(this).attr('data-coordinates'))
-            zoomMark(coordinates)
-          }
-        })
-        //spoiler-contact
-
-        //contact-list
-
-        const contactListWrap = $('.contacts__list-wrap')
-        const contactList = $('.contacts__list')
-        let scrollPos = contactList.position().top;
-        contactListWrap.on("scroll", function () {
-          scrollPos = contactList.position().top;
-        });
-
-        $(document).on('click', '.contacts__arrow_prev', function (e) {
-          scrollPos = contactList.position().top;
-          scrollPos = scrollPos + 100
-          contactListWrap.animate({
-            scrollTop: ((-1) * scrollPos)
-          });
-        })
-        $(document).on('click', '.contacts__arrow_next', function (e) {
-          scrollPos = contactList.position().top;
-          scrollPos = scrollPos - 100
-          contactListWrap.animate({
-            scrollTop: ((-1) * scrollPos)
-          });
-        })
-        //contact-list
-
-      })
-
-
-
-    })
-  </script>
+  @include('components/_script-contact.html')
 
   @include('components/_popup.html')
   @include('components/_popup-cons.html')
