@@ -53,6 +53,9 @@
       @include adpt ($tab-r) {
         border-right: 1px solid $grey;
       }
+      @include adpt ($bmob-r){
+        border: none;
+      }
     }
 
     &:nth-child(3n+1) {
@@ -68,26 +71,41 @@
       border-top: 1px solid $grey;
     }
 
-    &:nth-child(n+3) {
+    &:nth-child(n+4) {
       border-top: 1px solid $grey;
+
+      @include adpt ($tab-r) {
+        border-top: none;
+      }
 
       @include adpt ($bmob-r) {
         border: none;
       }
     }
 
-    &:nth-child(2n) {
-      border-right: none;
+    @include adpt ($tab-r) {
+      &:nth-child(2n) {
+        border-right: none;
+      }
+
+      &:nth-child(4) {
+        border-bottom: 1px solid $grey;
+        @include adpt ($bmob-r){
+          border: none;
+        }
+      }
+
+      &:nth-child(2n+1) {
+        border-left: none;
+      }
     }
 
-    &:nth-child(2n+1) {
-      border-left: none;
-    }
 
   }
 
 
   &__item-title-wrap {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,8 +134,18 @@
   }
 
   &__decor-icon-wrap {
-    position: relative;
-    margin-right: -20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -20px;
+    height: 2px;
+    width: 200px;
+
+    @include adpt ($bmob-r) {
+      width: 120px;
+      right: -15px;
+      display: none;
+    }
   }
 
   &__decor-icon {
@@ -170,10 +198,11 @@
     }
   }
 
-  &__img-wrap{
+  &__img-wrap {
     position: relative;
     overflow: hidden;
   }
+
   &__img {
     width: 140px;
     height: 187px;

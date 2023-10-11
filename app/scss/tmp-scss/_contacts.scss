@@ -25,6 +25,10 @@
       grid-template-columns: 1fr;
       grid-gap: 55px;
     }
+    @include adpt ($bmob-r){
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__right {
@@ -37,6 +41,10 @@
       max-width: 420px;
       margin: 0 auto;
       width: 100%;
+    }
+    @include adpt ($bmob-r){
+      max-width: 100%;
+      flex: 1;
     }
   }
 

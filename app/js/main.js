@@ -17,7 +17,22 @@ window.onload = function () {
       popupLink.addEventListener("click", function (e) {
         const popupName = popupLink.getAttribute('href').replace('#', '');
         const curentPopup = document.getElementById(popupName);
-        popupOpen(curentPopup);
+        if (popupName === "buy") {
+
+          let parent = this.closest('.product-item__wrap');
+          let name = parent.querySelector('.product-item__name').textContent
+          let price = parent.querySelector('#price')
+          if (price) {
+            price = "Итого: " + price.textContent + " Р"
+          } else {
+            price = "Требуется уточнения по цене"
+          }
+
+          popupBuyOpen(curentPopup, price, name);
+        } else {
+          popupOpen(curentPopup);
+        }
+
         e.preventDefault();
       });
     }
@@ -42,6 +57,27 @@ window.onload = function () {
       } else {
         bodyLock();
       }
+      curentPopup.classList.add('open');
+      curentPopup.addEventListener("click", function (e) {
+        if (!e.target.closest('.popup__content')) {
+          popupClose(e.target.closest('.popup'));
+        }
+      });
+    }
+  }
+
+  function popupBuyOpen(curentPopup, price, name) {
+    if (curentPopup && unlock) {
+      const popupActive = document.querySelector('.popup.open');
+      if (popupActive) {
+        popupClose(popupActive, false);
+      } else {
+        bodyLock();
+      }
+
+      curentPopup.querySelector('#price-product').textContent = price
+      curentPopup.querySelector('#name-product').textContent = name
+
       curentPopup.classList.add('open');
       curentPopup.addEventListener("click", function (e) {
         if (!e.target.closest('.popup__content')) {
@@ -255,10 +291,14 @@ $(function () {
   //promo-slider
   const promoSlider = new Swiper('.js-promo-slider', {
     loop: true,
-    //effect: 'coverflow',
-
+    speed: 800,
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     autoplay: {
       delay: 6000,
+      disableOnInteraction: false,
     },
     navigation: {
       nextEl: '.promo-slider__arrow_next',
@@ -359,6 +399,10 @@ $(function () {
   const recommendationSliderSidebar = new Swiper('.js-recommendation-slider-sidebar', {
     slidesPerView: 1,
     spaceBetween: 20,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     navigation: {
       nextEl: '.recommendation__arrow_next',
       prevEl: '.recommendation__arrow_prev',
@@ -452,8 +496,14 @@ $(function () {
   //js-vacancy
   $(document).on('click', '.js-vacancy', function (e) {
     e.preventDefault()
-    $(this).toggleClass('_open')
-    $(this).parents('.vacancy__list-item').toggleClass("_open").find('.vacancy__subitem-block').slideToggle();
+    let btn = $('.vacancy__list-btn-popup')
+    if (!btn.is(e.target) &&
+      btn.has(e.target).length === 0) {
+
+      $(this).find('button').toggleClass('_open')
+      $(this).toggleClass("_open").find('.vacancy__subitem-block').slideToggle();
+    }
+
   })
   //js-vacancy
 
